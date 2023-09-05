@@ -16,7 +16,7 @@
 | Student      | Student Full Name |  Student SFSU Email   | GitHub Username |        Discord Username         |        Role         |
 |    :---:     |       :---:       |         :---:         |      :---:      |             :---:               |        :---:        | 
 |      #1      |     Alec Nagal    | anagal1@mail.sfsu.edu |    itsmeAlec    | aleccsucky/Alec Nagal(nickname) |        Lead         |
-|      #2      |     Kenneth pang  | Kpang3@sfsu.edu       |       AnbuXD    |       Kenneth#2091              |                     |
+|      #2      |     Kenneth pang  | Kpang3@sfsu.edu       |       AnbuXD    |       Kenneth#2091              |  Frontend Assistant |
 |      #3      |                   |                       |                 |                                 |                     |
 |      #4      |                   |                       |                 |                                 |                     |
 |      #5      |                   |                       |                 |                                 |                     |
