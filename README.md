@@ -17,7 +17,7 @@
 |    :---:     |       :---:       |         :---:         |      :---:      |             :---:               |        :---:        | 
 |      #1      |     Alec Nagal    | anagal1@mail.sfsu.edu |    itsmeAlec    | aleccsucky/Alec Nagal(nickname) |        Lead         |
 |      #2      |     Kenneth pang  | Kpang3@sfsu.edu       |       AnbuXD    |       Kenneth#2091              |  Frontend Assistant |
-|      #3      |                   |                       |                 |                                 |                     |
+|      #3      |    Ali Alsharif   |aalsharif@mail.sfsu.edu|  AliAlsharif99  |   AliAlsharif#9220 (mil3aga)    |  Frontend Lead      |
 |      #4      |                   |                       |                 |                                 |                     |
 |      #5      |                   |                       |                 |                                 |                     |
 |      #6      |                   |                       |                 |                                 |                     |
