@@ -20,7 +20,7 @@
 |      #3      |    Ali Alsharif   |aalsharif@mail.sfsu.edu|  AliAlsharif99  |   AliAlsharif#9220 (mil3aga)    |  Frontend Lead      |
 |      #4      | Gabriella Arcilla |   garcilla2@sfsu.edu  | gabriellaarcilla|            gabya#6357           |  Git/Doc Master     |
 |      #5      |    Robel Ayelew   |   rayelew@sfsu.edu    |  RobelKasahun   |     Robel Ayelew / mr.handysam  |  Backend Assistance |
-|      #6      |                   |                       |                 |                                 |                     |
+| #6      |           Gerry Putra        |            gputra@mail.sfsu.edu           |          gerry-putra       |                  stormwatch               |       Backend Lead              |
 
 
 4. All the team members must sign the team contract found [here](https://forms.gle/dxATAsa9isXKbcBn7). Missing signatures from students will result in these students being dropped from the course since this means that they disagree with the policies and terms needed to work in a team environment. 
