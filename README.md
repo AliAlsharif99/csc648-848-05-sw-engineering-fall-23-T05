@@ -16,7 +16,7 @@
 | Student      | Student Full Name |  Student SFSU Email   | GitHub Username |        Discord Username         |        Role         |
 |    :---:     |       :---:       |         :---:         |      :---:      |             :---:               |        :---:        | 
 |      #1      |     Alec Nagal    | anagal1@mail.sfsu.edu |    itsmeAlec    | aleccsucky/Alec Nagal(nickname) |        Lead         |
-|      #2      |     Kenneth pang  | Kpang3@sfsu.edu       |       AnbuXD    |       Kenneth#2091              |  Frontend Assistant |
+|      #2      |     Kenneth pang  | Kpang3@sfsu.edu       |       AnbuXD    |       Kenneth#2091              |  Database Master    |
 |      #3      |    Ali Alsharif   |aalsharif@mail.sfsu.edu|  AliAlsharif99  |   AliAlsharif#9220 (mil3aga)    |  Frontend Lead      |
 |      #4      | Gabriella Arcilla |   garcilla2@sfsu.edu  | gabriellaarcilla|            gabya#6357           |  Git/Doc Master     |
 |      #5      |    Robel Ayelew   |   rayelew@sfsu.edu    |  RobelKasahun   |     Robel Ayelew / mr.handysam  |  Backend Assistance |
