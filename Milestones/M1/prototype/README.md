@@ -1,4 +1,4 @@
-# Prototype Folder
+# Application Folder
 
 ## Purpose
 The purpose of this folder is to store all the source code and related files for your team's application. You are free 
