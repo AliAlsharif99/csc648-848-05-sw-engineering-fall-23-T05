@@ -18,3 +18,20 @@ def login():
     return render_template('login.html')
 
 
+@bp.route('/feed')
+def feed():
+    return render_template('feed.html')
+
+
+@bp.route('/search')
+def search():
+    return render_template('search.html')
+
+
+@bp.route('/team')
+def team():
+    return render_template('team.html')
+
+
+
+
