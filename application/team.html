@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed - BiteRate App</title>
+    <title>Meet The Team - BiteRate App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,29 +66,34 @@
 
         .main-content {
             padding: 50px;
+            text-align: center;
         }
 
-        .feed-card {
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .team-card {
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
-            margin-bottom: 20px;
+            text-align: center;
         }
 
-        .feed-card img {
-            max-width: 100px;
-            float: left;
-            margin-right: 20px;
+        .team-card img {
+            max-width: 100%;
+            border-radius: 50%;
         }
 
-        .feed-card h3 {
-            margin-top: 0;
+        .team-card h3 {
+            margin: 20px 0 10px;
         }
 
-        .feed-card p {
-            clear: both;  /* Clear float */
+        .team-card p {
+            color: #888;
         }
-
     </style>
 </head>
 
@@ -99,7 +104,7 @@
                 <h1>BiteRate</h1>
             </div>
             <nav>
-                <a href="index.html">Home</a>
+                <a href="home.html">Home</a>
                 <a href="team.html">Meet The Team</a>
                 <a href="feed.html">Feed</a>
                 <a href="search.html">Search</a>
@@ -108,26 +113,40 @@
         </div>
     </header>
     <div class="main-content">
-        <h2>Recent Reviews</h2>
-
-        <!-- Example of a review card -->
-        <div class="feed-card">
-            <img src="path_to_image1.jpg" alt="Restaurant Image">
-            <h3>Restaurant Name</h3>
-            <p>Reviewed by Alec Nagal</p>
-            <p>This is just an example review content for the restaurant...</p>
+        <h2>Our Amazing Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="path_to_image1.jpg" alt="Team Member 1">
+                <h3>name</h3>
+                <p>position</p>
+            </div>
+            <div class="team-card">
+                <img src="path_to_image2.jpg" alt="Team Member 2">
+                <h3>name</h3>
+                <p>position</p>
+            </div>
+            <div class="team-card">
+                <img src="path_to_image3.jpg" alt="Team Member 3">
+                <h3>name</h3>
+                <p>position</p>
+            </div>
+            <div class="team-card">
+                <img src="path_to_image3.jpg" alt="Team Member 3">
+                <h3>name</h3>
+                <p>position</p>
+            </div>
+            <div class="team-card">
+                <img src="path_to_image3.jpg" alt="Team Member 3">
+                <h3>name</h3>
+                <p>position</p>
+            </div>
+            <div class="team-card">
+                <img src="path_to_image3.jpg" alt="Team Member 3">
+                <h3>name</h3>
+                <p>position</p>
+            </div>
+            <!-- You can add more team members in the same format as above -->
         </div>
-
-        <div class="feed-card">
-            <img src="path_to_image2.jpg" alt="Restaurant Image">
-            <h3>Another Restaurant</h3>
-            <p>Reviewed by Elon Musk</p>
-            <p>Food here was great! They also had a charge station for my Cyber Truck</p>
-        </div>
-
-        <!-- You can add more review cards in the same format as above -->
-        <!-- Replace "path_to_image.jpg with actual image"-->
-
     </div>
 </body>
 

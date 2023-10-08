@@ -1,44 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Application</title>
+    <title>Search - BiteRate App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        
-        nav {
-            background-color: #f2f2f2;
-            padding: 10px;
-        }
-        
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
             color: #333;
         }
-        
-        nav a:hover {
-            text-decoration: underline;
+
+        header {
+            padding: 50px 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        
-        .content {
-            margin-top: 20px;
+
+        .header-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-container {
+            flex: 0;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #006666;
+            font-size: 35px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            margin-left: 160px;
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        nav a:not(:last-child)::after {
+            content: '/';
+            margin: 0 9px;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #555;
+        }
+
+        .main-content {
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .search-bar {
+            width: 60%;
+            padding: 15px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+
+        .search-btn {
+            padding: 15px 20px;
+            margin-left: 10px;
+            background-color: #006666;
+            color: #FFF;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #004444;
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <a href="feed.html">Feed</a>
-        <a href="your_list.html">Your List</a>
-        <a href="search.html">Search</a>
-        <a href="profile.html">Profile</a>
-        <a href="about.html">About</a>
-    </nav>
-    <div class="content">
-        <h2>Search</h2>
-        <p>Content for the Search page goes here.</p>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <h1>BiteRate</h1>
+            </div>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="team.html">Meet The Team</a>
+                <a href="feed.html">Feed</a>
+                <a href="search.html">Search</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <h2>Search for Restaurants</h2>
+        <div>
+            <input type="text" class="search-bar" placeholder="Type to search...">
+            <button class="search-btn">Search</button>
+        </div>
     </div>
 </body>
+
+</html>

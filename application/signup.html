@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed - BiteRate App</title>
+    <title>Sign Up - BiteRate App</title>
     <style>
+        /* Common styles as before */
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -65,30 +67,44 @@
         }
 
         .main-content {
-            padding: 50px;
+            padding: 100px 50px;
+            text-align: center;
         }
 
-        .feed-card {
+        .signup-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 3px;
         }
 
-        .feed-card img {
-            max-width: 100px;
-            float: left;
-            margin-right: 20px;
+        .signup-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #006666;
+            border: none;
+            border-radius: 3px;
+            color: #FFF;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        .feed-card h3 {
-            margin-top: 0;
+        .signup-btn:hover {
+            background-color: #004444;
         }
 
-        .feed-card p {
-            clear: both;  /* Clear float */
+        .login-link {
+            display: block;
+            margin-top: 20px;
         }
-
     </style>
 </head>
 
@@ -99,7 +115,7 @@
                 <h1>BiteRate</h1>
             </div>
             <nav>
-                <a href="index.html">Home</a>
+                <a href="home.html">Home</a>
                 <a href="team.html">Meet The Team</a>
                 <a href="feed.html">Feed</a>
                 <a href="search.html">Search</a>
@@ -108,26 +124,17 @@
         </div>
     </header>
     <div class="main-content">
-        <h2>Recent Reviews</h2>
-
-        <!-- Example of a review card -->
-        <div class="feed-card">
-            <img src="path_to_image1.jpg" alt="Restaurant Image">
-            <h3>Restaurant Name</h3>
-            <p>Reviewed by Alec Nagal</p>
-            <p>This is just an example review content for the restaurant...</p>
+        <h2>Sign Up</h2>
+        <div class="signup-form">
+            <form action="path_to_backend_signup_processing" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+            <a href="login.html" class="login-link">Already have an account? Login now!</a>
         </div>
-
-        <div class="feed-card">
-            <img src="path_to_image2.jpg" alt="Restaurant Image">
-            <h3>Another Restaurant</h3>
-            <p>Reviewed by Elon Musk</p>
-            <p>Food here was great! They also had a charge station for my Cyber Truck</p>
-        </div>
-
-        <!-- You can add more review cards in the same format as above -->
-        <!-- Replace "path_to_image.jpg with actual image"-->
-
     </div>
 </body>
 
