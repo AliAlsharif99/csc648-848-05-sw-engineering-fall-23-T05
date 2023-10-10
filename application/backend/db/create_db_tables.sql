@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS `biteRateDB`.`User` (
   `user_id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NULL,
-  `password` VARCHAR(100) NOT NULL,
-  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`user_id`))
 ENGINE = InnoDB;
 
