@@ -131,23 +131,23 @@
                 <h1>BiteRate</h1>
             </div>
             <nav>
-                <a href="home.html">Home</a>
-                <a href="team.html">Meet The Team</a>
-                <a href="feed.html">Feed</a>
-                <a href="search.html">Search</a>
-                <a href="login.html">Login</a>
+                <a href="/">Home</a>
+                <a href="/team">Meet The Team</a>
+                <a href="/feed">Feed</a>
+                <a href="/search">Search</a>
+                <a href="/login">Login</a>
             </nav>
         </div>
     </header>
     <div class="main-content">
         <h2>Login</h2>
         <div class="login-form">
-            <form action="path_to_backend_processing" method="post">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
+            <form id= "loginForm" action="path_to_backend_processing" method="post">
+                <input id="loginUsername" type="text" name="username" placeholder="Username" required>
+                <input id="loginPassword" type="password" name="password" placeholder="Password" required>
                 <button type="submit" class="login-btn">Login</button>
             </form>
-            <a href="signup.html" class="signup-link">Don't have an account? Sign up now!</a>
+            <a href="/registration" class="signup-link">Don't have an account? Sign up now!</a>
         </div>
     </div>
     <footer>
