@@ -69,6 +69,8 @@
         .main-content {
             padding: 100px 50px;
             text-align: center;
+            width: 900px;
+            margin: auto;
         }
 
         .signup-form {
@@ -105,22 +107,31 @@
             display: block;
             margin-top: 20px;
         }
+
         footer {
-            background-color: #ffffff;  /* Light gray background */
-            padding: 90px 0;           /* Padding for top and bottom */
-            text-align: center;        /* Center the content */
+            background-color: #ffffff;
+            /* Light gray background */
+            padding: 90px 0;
+            /* Padding for top and bottom */
+            text-align: center;
+            /* Center the content */
             font-size: 12px;
         }
 
         footer a {
-            color: #555;               /* Darker gray for links */
-            margin: 0 5px;            /* Spacing between links */
-            text-decoration: none;     /* Remove underline */
-            transition: color 0.3s;    /* Smooth color transition */
+            color: #555;
+            /* Darker gray for links */
+            margin: 0 5px;
+            /* Spacing between links */
+            text-decoration: none;
+            /* Remove underline */
+            transition: color 0.3s;
+            /* Smooth color transition */
         }
 
         footer a:hover {
-            color: #333;               /* Darker color on hover */
+            color: #333;
+            /* Darker color on hover */
         }
     </style>
 </head>
@@ -144,7 +155,8 @@
         <h2>Sign Up</h2>
         <div class="signup-form">
             <form action="path_to_backend_signup_processing" method="post">
-                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
