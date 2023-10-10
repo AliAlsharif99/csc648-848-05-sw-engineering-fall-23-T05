@@ -1,7 +1,7 @@
-These are some examples on how we handle frontend logic using Fetch API.
-Note that these are just examples, make sure the html element id matches to what we have.
+// These are some examples on how we handle frontend logic using Fetch API.
+// Note that these are just examples, make sure the html element id matches to what we have.
 
-Example to fetch and wrap data from Login page:
+// Example to fetch and wrap data from Login page:
     // This code will grab data from the text fields of the login page,
     // wrap it in JSON format, and send this wrapped package containing those user data,
     // to the backend for me to handle...
@@ -35,7 +35,7 @@ Example to fetch and wrap data from Login page:
     });
 
 
-Example to fetch and wrap data from Registration page:
+// Example to fetch and wrap data from Registration page:
     // This code will grab data from the text fields of the registration page,
     // wrap it in JSON format, and send this wrapped package containing those user data,
     // to the backend for me to handle...
@@ -71,7 +71,7 @@ Example to fetch and wrap data from Registration page:
 
 
 
-Example to fetch restaurant data from DB to Home page:
+// Example to fetch restaurant data from DB to Home page:
     // This code will request and get all users data from the backend,
     // and spit out users on an html element with id='users',
     // creating a new <p> tags on each user data...
@@ -87,7 +87,7 @@ Example to fetch restaurant data from DB to Home page:
     };
 
 
-Example to fetch and wrap search data:
+// Example to fetch and wrap search data:
     // This code will be triggered once a user release a keypress.
     // Grab the user search input sends it to the backend,
     // then getting back the response from the backend,
