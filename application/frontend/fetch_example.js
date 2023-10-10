@@ -5,14 +5,14 @@ Example to fetch and wrap data from Login page:
     // This code will grab data from the text fields of the login page,
     // wrap it in JSON format, and send this wrapped package containing those user data,
     // to the backend for me to handle...
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
         let formData = {
-            email: document.getElementById('loginEmail').value,
+            email: document.getElementById('loginUsername').value,
             password: document.getElementById('loginPassword').value
         };
-
+    
         fetch('/api/login', {
             method: 'POST',
             headers: {
@@ -39,15 +39,15 @@ Example to fetch and wrap data from Registration page:
     // This code will grab data from the text fields of the registration page,
     // wrap it in JSON format, and send this wrapped package containing those user data,
     // to the backend for me to handle...
-    document.getElementById('registerForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
         let formData = {
-            name: document.getElementById('name').value,
+            username: document.getElementById('username').value,
             email: document.getElementById('email').value,
-            password: document.getElementById('password').value
+            password: document.getElementById('password').value,
         };
-
+    
         fetch('/api/register', {
             method: 'POST',
             headers: {
@@ -55,9 +55,17 @@ Example to fetch and wrap data from Registration page:
             },
             body: JSON.stringify(formData)
         })
-        .then(response => response.json())
+        .then(response => {
+            if (response.status === 401) {
+                throw new Error('Invalid registration data!');
+            }
+            return response.json();
+        })
         .then(data => {
             alert(data.message);
+        })
+        .catch(error => {
+            alert(error.message);
         });
     });
 
