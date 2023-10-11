@@ -80,5 +80,20 @@ def team():
     return render_template('team.html')
 
 
+@bp.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
+@bp.route('/follow')
+def follow():
+    return render_template('follow.html')
+
+
+@bp.route('/terms')
+def terms():
+    return render_template('terms.html')
+
+
 
 

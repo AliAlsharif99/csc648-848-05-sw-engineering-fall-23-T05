@@ -1,0 +1,16 @@
+<footer>
+    <div class="social-media">
+        <a href="#">
+            <img class="social" src="{{ url_for('static', filename='resources/images/facebook.png') }}" alt="Facebook" />
+        </a>
+        <a href="#">
+            <img class="social" src="{{ url_for('static', filename='resources/images/instagram.png') }}" alt="Instagram" />
+        </a>
+        <a href="#">
+            <img class="social" src="{{ url_for('static', filename='resources/images/twitter.png') }}" alt="Twitter" />
+        </a>
+    </div>
+    <a href="{{ url_for('routes.contact') }}">Contact Us</a>
+    <a href="{{ url_for('routes.follow') }}">Follow Us</a>
+    <a href="{{ url_for('routes.terms') }}">Terms of Service</a>
+</footer>
