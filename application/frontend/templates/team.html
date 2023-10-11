@@ -55,7 +55,6 @@
         }
 
         nav a:not(:last-child)::after {
-            content: '/';
             margin: 0 9px;
             color: #333;
         }
@@ -111,11 +110,83 @@
         footer a:hover {
             color: #333;               /* Darker color on hover */
         }
+
+
+        /* for navigation bar */
+
+        header {
+            padding: 50px 90px;
+            display: flex;
+            justify-content: center;
+            /* Center the wrapper div */
+            align-items: center;
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            /* Aligns content to the start (left) of the container */
+            align-items: center;
+            width: 100%;
+            /* Use full width of the container */
+        }
+
+        .logo-container {
+            flex: 0;
+            /* This ensures it doesn't grow in flex context */
+        }
+
+        header h1 {
+            margin: 0;
+            /* color: #006666; */
+            color: #232323;
+            /* Dark Teal color */
+            font-size: 35px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            margin-left: 80px;
+            /* Move it closer to h1 */
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+        }
+
+        nav a {
+            /* color: #333; */
+            color: #232323;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        nav a:not(:last-child)::after {
+            /* content: '/'; */
+            margin: 0 9px;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #555;
+        }
+
+        #search {
+            width: 500px;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            margin-left: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* End of navigation */
     </style>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="header-wrapper">
             <div class="logo-container">
                 <h1>BiteRate</h1>
@@ -128,7 +199,27 @@
                 <a href="/login">Login</a>
             </nav>
         </div>
-    </header>
+    </header> -->
+
+    <div class="header-content">
+        <header>
+            <div class="header-wrapper"> <!-- The wrapper div -->
+                <div class="logo-container"> <!-- The logo div -->
+                    <h1>BiteRate</h1>
+                </div>
+                <label for="restaurant-search">
+                    <input type="search" id="search" name="search" placeholder="Search Restaurants">
+                </label>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/team">Meet The Team</a>
+                    <a href="/feed">Feed</a>
+                    <a href="/login">Log In</a>
+                    <a href="/registration">Sign Up</a>
+                </nav>
+            </div>
+        </header>
+    </div>
     <div class="main-content">
         <h2>Our Amazing Team</h2>
         <div class="team-grid">
@@ -166,6 +257,17 @@
         </div>
     </div>
     <footer>
+        <div class="social-media">
+            <a href="#">
+                <img class="social" src="../static/resources/images/facebook.png" />
+            </a>
+            <a href="#">
+                <img class="social" src="../static/resources/images/instagram.png" />
+            </a>
+            <a href="#">
+                <img class="social" src="../static/resources/images/twitter.png" />
+            </a>
+        </div>
         <a href="contact.html">Contact Us</a>
         <a href="follow.html">Follow Us</a>
         <a href="terms.html">Terms of Service</a>
