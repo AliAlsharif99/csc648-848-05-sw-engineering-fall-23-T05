@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 50px 90px;
+    display: flex;
+    justify-content: center;
+    /* Center the wrapper div */
+    align-items: center;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    /* Aligns content to the start (left) of the container */
+    align-items: center;
+    width: 100%;
+    /* Use full width of the container */
+}
+
+.logo-container {
+    flex: 0;
+    /* This ensures it doesn't grow in flex context */
+}
+
+header h1 {
+    margin: 0;
+    /* color: #006666; */
+    color: #232323;
+    /* Dark Teal color */
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-left: 80px;
+    /* Move it closer to h1 */
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+}
+
+nav a {
+    /* color: #333; */
+    color: #232323;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+nav a:not(:last-child)::after {
+    /* content: '/'; */
+    margin: 0 9px;
+    color: #333;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+.main-content {
+    text-align: center;
+    width: 700px;
+    padding: 20px;
+    margin-top: 47px;
+}
+
+.download-btn {
+    margin-top: 20px;
+    padding: 15px 35px;
+    border: 2px solid #000000;
+    /* Darker border */
+    border-radius: 3px;
+    /* Rounded edges */
+    background-color: #FFF;
+    color: #242424;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #F7F7F7;
+}
+
+.Welcome-content {
+    padding: 50px;
+    text-align: center;
+}
+
+.application-content {
+    padding: 50px;
+    text-align: center;
+}
+
+.application-content2 {
+    padding: 50px;
+    text-align: center;
+}
+
+.welcome-header {
+    font-size: 45px;
+}
+
+.firsthr {
+    width: 80%;
+    /* Adjust this to the desired width */
+    margin-left: auto;
+    margin-right: auto;
+    border-color: lightgray;
+    background-color: lightgray;
+    opacity: 0.5;
+    border-top: 1.px solid lightgray;
+    border-bottom: none;
+}
+
+footer {
+    background-color: #ffffff;
+    /* Light gray background */
+    padding: 90px 0;
+    /* Padding for top and bottom */
+    text-align: center;
+    /* Center the content */
+    font-size: 12px;
+}
+
+footer a {
+    color: #555;
+    /* Darker gray for links */
+    margin: 0 5px;
+    /* Spacing between links */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+footer a:hover {
+    color: #333;
+    /* Darker color on hover */
+}
+
+#search {
+    width: 500px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 150px;
+}
+
+#header-content {
+    background-image: url(../restaurant-review.png);
+    height: 600px;
+}
+
+#header-title {
+    font-size: 60px;
+    color: white;
+}
+
+.card-group {
+    width: 1328px;
+    margin: auto;
+    display: block;
+    overflow: hidden;
+}
+
+.card {
+    width: 400px;
+    float: left;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    clear: both;
+}
+
+.card-header>.name {
+    color: #2D2E2F;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+}
+
+.rating>.stars {
+    width: 80px;
+    margin: 7px;
+    float: left;
+}
+
+.card-group>.card>.card-image>.restaurant-img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 400px;
+    height: 240px;
+}
+
+.rating-section {
+    width: 300px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.number-stars,
+.reviews {
+    display: block;
+    float: left;
+    margin-top: 13px;
+}
+
+.number-stars {
+    color: #000000;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.reviews {
+    color: #6F7072;
+}
+
+.rating-review {
+    margin-left: 150px;
+}
+
+.social {
+    width: 30px;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
