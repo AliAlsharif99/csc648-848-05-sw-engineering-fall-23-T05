@@ -1,4 +1,4 @@
-from ..models import user
+from ..models import user, restaurant, restaurant_image, image_url
 from .. import db
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -19,4 +19,36 @@ def verify_user(email, password):
 
 def get_user_by_email(email):
     return user.User.query.filter_by(email=email).first()
+
+
+def get_top_rated_restaurants(limit=6):
+    try:
+        # Fetch restaurants in ascending order by restaurant_id.
+        restaurants = restaurant.Restaurant.query.order_by(restaurant.Restaurant.restaurant_id.asc()).limit(limit).all()
+
+        restaurant_data = []
+        for res in restaurants:
+            # Fetch the associated image for each restaurant
+            res_img = restaurant_image.RestaurantImage.query.filter_by(restaurant=res.restaurant_id).first()
+
+            img_url = None
+            if res_img:
+                img_url_obj = image_url.ImageURL.query.get(res_img.image)
+                if img_url_obj:
+                    img_url = img_url_obj.image_url
+
+            restaurant_data.append({
+                "name": res.name,
+                "cuisine": res.cuisine,
+                "address": res.address,
+                "open_date": res.open_date,
+                "image_url": img_url
+            })
+
+        return restaurant_data
+
+    except Exception as e:
+        print(f"Error fetching top-rated restaurants: {e}")
+        return []
+
 

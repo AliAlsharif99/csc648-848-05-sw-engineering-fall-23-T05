@@ -2,6 +2,7 @@ from .. import db
 
 
 class RestaurantImage(db.Model):
+    __tablename__ = 'RestaurantImage'
     restaurant_image_id = db.Column(db.Integer, primary_key=True)
-    restaurant_id = db.Column(db.Integer, db.ForeignKey('restaurant.restaurant_id'), nullable=False)
-    image_id = db.Column(db.Integer, db.ForeignKey('image_url.image_id'), nullable=False)
+    restaurant = db.Column(db.Integer, db.ForeignKey('Restaurant.restaurant_id'), nullable=False)
+    image = db.Column(db.Integer, db.ForeignKey('ImageURL.image_id'), nullable=False)

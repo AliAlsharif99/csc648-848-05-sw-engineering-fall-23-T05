@@ -6,7 +6,9 @@ bp = Blueprint('routes', __name__)
 
 @bp.route('/')
 def home():
-    return render_template('home.html')
+    restaurants = controllers.get_top_rated_restaurants()
+    print("\n" + str(restaurants) + "\n")
+    return render_template('home.html', restaurants=restaurants)
 
 
 @bp.route('/registration', methods=['GET', 'POST'])
