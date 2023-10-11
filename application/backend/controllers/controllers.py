@@ -21,10 +21,10 @@ def get_user_by_email(email):
     return user.User.query.filter_by(email=email).first()
 
 
-def get_top_rated_restaurants(limit=6):
+def get_top_rated_restaurants(limit=9):
     try:
-        # Fetch restaurants in ascending order by restaurant_id.
-        restaurants = restaurant.Restaurant.query.order_by(restaurant.Restaurant.restaurant_id.asc()).limit(limit).all()
+        # Fetch restaurants in descending order by rating.
+        restaurants = restaurant.Restaurant.query.order_by(restaurant.Restaurant.rating.desc()).limit(limit).all()
 
         restaurant_data = []
         for res in restaurants:
@@ -42,6 +42,8 @@ def get_top_rated_restaurants(limit=6):
                 "cuisine": res.cuisine,
                 "address": res.address,
                 "open_date": res.open_date,
+                "rating": float(res.rating),  # Convert the Decimal type to float for JSON serialization.
+                "review_count": res.review_count,
                 "image_url": img_url
             })
 
@@ -50,5 +52,3 @@ def get_top_rated_restaurants(limit=6):
     except Exception as e:
         print(f"Error fetching top-rated restaurants: {e}")
         return []
-
-

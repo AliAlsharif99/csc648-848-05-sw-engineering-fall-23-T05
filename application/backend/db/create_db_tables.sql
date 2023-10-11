@@ -36,6 +36,8 @@ CREATE TABLE IF NOT EXISTS `biteRateDB`.`Restaurant` (
   `cuisine` VARCHAR(45) NOT NULL,
   `address` VARCHAR(200) NOT NULL,
   `open_date` DATETIME NOT NULL,
+  `rating` DECIMAL(5,2) NOT NULL,
+  `review_count` INT NOT NULL,
   PRIMARY KEY (`restaurant_id`))
 ENGINE = InnoDB;
 
