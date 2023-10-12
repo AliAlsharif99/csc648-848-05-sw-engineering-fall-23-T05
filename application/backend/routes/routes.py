@@ -80,9 +80,9 @@ def feed():
     return render_template('feed.html')
 
 
-@bp.route('/search')
-def search():
-    return render_template('search.html')
+@bp.route('/search_result')
+def search_result():
+    return render_template('search_result.html')
 
 
 @bp.route('/team')
