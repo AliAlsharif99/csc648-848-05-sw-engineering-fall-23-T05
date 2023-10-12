@@ -82,7 +82,10 @@ def feed():
 
 @bp.route('/search_result')
 def search_result():
-    return render_template('search_result.html')
+    query = request.args.get('search')
+    restaurants = controllers.search_restaurants(query)
+    print(str(restaurants))
+    return render_template('search_result.html', restaurants=restaurants)
 
 
 @bp.route('/team')

@@ -52,3 +52,37 @@ def get_top_rated_restaurants(limit=15):
     except Exception as e:
         print(f"Error fetching top-rated restaurants: {e}")
         return []
+
+
+def search_restaurants(query):
+    try:
+        # Using the 'ilike' function for a case-insensitive search
+        restaurants = restaurant.Restaurant.query.filter(
+            restaurant.Restaurant.name.ilike(f"%{query}%") | restaurant.Restaurant.address.ilike(f"%{query}%")
+        ).all()
+
+        restaurant_data = []
+        for res in restaurants:
+            res_img = restaurant_image.RestaurantImage.query.filter_by(restaurant=res.restaurant_id).first()
+
+            img_url = None
+            if res_img:
+                img_url_obj = image_url.ImageURL.query.get(res_img.image)
+                if img_url_obj:
+                    img_url = img_url_obj.image_url
+
+            restaurant_data.append({
+                "name": res.name,
+                "cuisine": res.cuisine,
+                "address": res.address,
+                "open_date": res.open_date,
+                "rating": float(res.rating),
+                "review_count": res.review_count,
+                "image_url": img_url
+            })
+
+        return restaurant_data
+
+    except Exception as e:
+        print(f"Error fetching restaurants by query: {e}")
+        return []
