@@ -84,7 +84,6 @@ def feed():
 def search_result():
     query = request.args.get('search')
     restaurants = controllers.search_restaurants(query)
-    print(str(restaurants))
     return render_template('search_result.html', restaurants=restaurants)
 
 

@@ -1,6 +1,7 @@
 from ..models import user, restaurant, restaurant_image, image_url
 from .. import db
 from werkzeug.security import generate_password_hash, check_password_hash
+from sqlalchemy import or_
 
 
 def add_user(first_name, last_name, password, email):
@@ -58,7 +59,11 @@ def search_restaurants(query):
     try:
         # Using the 'ilike' function for a case-insensitive search
         restaurants = restaurant.Restaurant.query.filter(
-            restaurant.Restaurant.name.ilike(f"%{query}%") | restaurant.Restaurant.address.ilike(f"%{query}%")
+            or_(
+                restaurant.Restaurant.name.ilike(f"%{query}%"),
+                restaurant.Restaurant.address.ilike(f"%{query}%"),
+                restaurant.Restaurant.cuisine.ilike(f"%{query}%")
+            )
         ).all()
 
         restaurant_data = []
