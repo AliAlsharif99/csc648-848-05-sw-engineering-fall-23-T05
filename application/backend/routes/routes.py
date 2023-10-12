@@ -64,6 +64,11 @@ def logout():
     return redirect(url_for('routes.home'))
 
 
+@bp.route('/restaurant')
+def restaurant():
+    return render_template('restaurant.html')
+
+
 @bp.route('/feed')
 def feed():
     return render_template('feed.html')
