@@ -30,7 +30,14 @@
         </header>
     </div>
     <div class="main-content">
-        <h2>Coming Soon</h2>
+        <script>
+            //pop-up function
+            function showComingSoonAlert() {
+                alert('Coming Soon!');
+            }
+
+            window.addEventListener('load', showComingSoonAlert);
+        </script>
         
     </div>
     {% include 'footer.html' %}  

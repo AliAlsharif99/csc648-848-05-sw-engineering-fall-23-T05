@@ -234,7 +234,7 @@ footer {
 .card-group > .card > .card-image > .restaurant-img {
     position: absolute;
     top: 50%;
-    left: 50%; // Added this for horizontal centering
+    left: 50%; /* Added this for horizontal centering */
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
