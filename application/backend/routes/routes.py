@@ -36,6 +36,12 @@ def registration():
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
+    # Check if the user is already logged in
+    if 'user_id' in session:
+        # flash('You are already logged in!', 'info')
+        print('You are already logged in!')
+        return redirect(url_for('routes.home'))
+
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
