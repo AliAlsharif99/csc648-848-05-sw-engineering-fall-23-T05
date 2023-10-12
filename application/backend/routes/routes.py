@@ -7,7 +7,11 @@ bp = Blueprint('routes', __name__)
 @bp.route('/')
 def home():
     restaurants = controllers.get_top_rated_restaurants()
-    return render_template('home.html', restaurants=restaurants)
+
+    user_data = None
+    if 'user_id' in session:
+        user_data = controllers.get_user_by_id(session['user_id'])
+    return render_template('home.html', restaurants=restaurants, user=user_data)
 
 
 @bp.route('/registration', methods=['GET', 'POST'])
@@ -29,7 +33,7 @@ def registration():
 
         # flash('Registration successful!', 'success')
         print('Registration successful!')
-        return redirect(url_for('routes.home'))
+        return redirect(url_for('routes.login'))
 
     return render_template('registration.html')
 

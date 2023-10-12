@@ -18,6 +18,10 @@ def verify_user(email, password):
     return None
 
 
+def get_user_by_id(user_id):
+    return user.User.query.get(user_id)
+
+
 def get_user_by_email(email):
     return user.User.query.filter_by(email=email).first()
 

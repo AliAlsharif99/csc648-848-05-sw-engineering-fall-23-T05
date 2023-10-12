@@ -299,3 +299,14 @@ footer {
     margin-bottom: 5px;
 }
 
+
+.welcome-user {
+    font-size: 2em; /* Made the font size larger */
+    margin: 10px 0;
+    padding-left: 15px; /* Added some padding to the left */
+    color: #FFF; /* Made the text color white */
+    position: absolute; /* Used absolute positioning */
+    top: 18%; /* Adjust this value to position it correctly vertically */
+    left: 5%; /* Adjust this value for horizontal positioning */
+    z-index: 1; /* Ensures the text stays on top of other content */
+}

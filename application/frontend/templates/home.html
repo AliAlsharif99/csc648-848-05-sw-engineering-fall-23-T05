@@ -20,6 +20,13 @@
 
             </div>
         </header>
+
+        {% if user %}
+        <div class="welcome-user">
+            Welcome, {{ user.first_name }} {{ user.last_name }}!
+        </div>
+        {% endif %}
+
         <div class="main-content">
             <h2 id="header-title">Track and share your favorite restaurants with your friends</h2>
 <!--            <p class="reg-sign-up">SIGN UP NOW AND START RATING</p>-->
