@@ -21,7 +21,7 @@ def get_user_by_email(email):
     return user.User.query.filter_by(email=email).first()
 
 
-def get_top_rated_restaurants(limit=9):
+def get_top_rated_restaurants(limit=15):
     try:
         # Fetch restaurants in descending order by rating.
         restaurants = restaurant.Restaurant.query.order_by(restaurant.Restaurant.rating.desc()).limit(limit).all()
