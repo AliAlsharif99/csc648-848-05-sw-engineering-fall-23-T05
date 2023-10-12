@@ -28,9 +28,6 @@
                  <button class="download-btn">SIGN UP HERE</button>
             </a>
         </div>
-        <div>
-            <!-- <hr class="firsthr"> -->
-        </div>
     </div>
 
     <div class="mid-content">
@@ -38,125 +35,38 @@
             <h1 class="welcome-header">High Rated Restaurants</h1>
 
             <div class="card-group">
-                <div class="card">
-                    <div class="card-image">
-                        <img class="restaurant-img" src="../static/resources/images/restaurant_image1.jpg" />
-                    </div>
+                {% for restaurant in restaurants %}
+                <a href="#" class="restaurant-card-link"> <!-- Card clickable link -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="restaurant-img" src="{{ restaurant.image_url }}" alt="{{ restaurant.name }}" />
+                        </div>
 
-                    <div class="card-header">
-                        <a class="name">Amici's East Coast Pizzeria</a>
-                        <div class="rating-section">
-                            <a class="rating">
-                                <img class="stars" src="../static/resources/images/stars.png" />
-                            </a>
-                            <div class="rating-review">
-                                <a class="number-stars">4.0</a>
-                                <a class="reviews">(45 reviews)</a>
+                        <div class="card-header">
+                            <div class="name">{{ restaurant.name }}</div>
+                            <div class="cuisine-address">
+                                <div class="cuisine">{{ restaurant.cuisine }}</div>
+                                <div class="address">{{ restaurant.address }}</div>
+                            </div>
+                            <div class="rating-section">
+                                <div class="rating">
+                                    <img class="stars" src="../static/resources/images/stars.png" alt="Star rating" />
+                                </div>
+                                <div class="rating-review">
+                                    <div class="number-stars">{{ restaurant.rating }}</div>
+                                    <div class="reviews">({{ restaurant.review_count }} reviews)</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <img class="restaurant-img" src="../static/resources/images/restaurant_image2.jpg" />
-                    </div>
-
-                    <div class="card-header">
-                        <a class="name">The Rustic Fork</a>
-                        <div class="rating-section">
-                            <a class="rating">
-                                <img class="stars" src="../static/resources/images/stars.png" />
-                            </a>
-                            <div class="rating-review">
-                                <a class="number-stars">4.0</a>
-                                <a class="reviews">(45 reviews)</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <img class="restaurant-img" src="../static/resources/images/restaurant_image3.jpg" />
-                    </div>
-
-                    <div class="card-header">
-                        <a class="name">Spice Avenue Bistro</a>
-                        <div class="rating-section">
-                            <a class="rating">
-                                <img class="stars" src="../static/resources/images/stars.png" />
-                            </a>
-                            <div class="rating-review">
-                                <a class="number-stars">4.0</a>
-                                <a class="reviews">(45 reviews)</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-group">
-                <div class="card">
-                    <div class="card-image">
-                        <img class="restaurant-img" src="../static/resources/images/restaurant_image4.jpg" />
-                    </div>
-
-                    <div class="card-header">
-                        <a class="name">Coastal Catch Grill</a>
-                        <div class="rating-section">
-                            <a class="rating">
-                                <img class="stars" src="../static/resources/images/stars.png" />
-                            </a>
-                            <div class="rating-review">
-                                <a class="number-stars">4.0</a>
-                                <a class="reviews">(45 reviews)</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <img class="restaurant-img" src="../static/resources/images/restaurant_image5.jpg" />
-                    </div>
-
-                    <div class="card-header">
-                        <a class="name">Garden Greens Cafe</a>
-                        <div class="rating-section">
-                            <a class="rating">
-                                <img class="stars" src="../static/resources/images/stars.png" />
-                            </a>
-                            <div class="rating-review">
-                                <a class="number-stars">4.0</a>
-                                <a class="reviews">(45 reviews)</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <img class="restaurant-img" src="../static/resources/images/restaurant_image6.jpg" />
-                    </div>
-
-                    <div class="card-header">
-                        <a class="name">Fire & Smoke Steakhouse</a>
-                        <div class="rating-section">
-                            <a class="rating">
-                                <img class="stars" src="../static/resources/images/stars.png" />
-                            </a>
-                            <div class="rating-review">
-                                <a class="number-stars">4.0</a>
-                                <a class="reviews">(45 reviews)</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </a>
+                {% endfor %}
             </div>
         </div>
     </div>
+
     {% include 'footer.html' %}
+
 </body>
 
 </html>
