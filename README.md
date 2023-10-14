@@ -21,7 +21,7 @@
 |      #4      | Gabriella Arcilla |   garcilla2@sfsu.edu  | gabriellaarcilla|            gabya#6357           |      Doc Master     |
 |      #5      |    Robel Ayelew   |   rayelew@sfsu.edu    |  RobelKasahun   |     Robel Ayelew / mr.handysam  |  Backend Assistant  |
 |      #6      |   Gerry Putra     | gputra@mail.sfsu.edu  |   gerry-putra   |  Stormwatch#3908 (stormwatch)   |       Backend Lead  |
-|      #7      |    James Lu       |                       |                 |     JamesLu                     |  Git Master         |
+|      #7      |    James Lu       |  jlu13@mail.sfsu.edu  |                 |     JamesLu                     |  Git Master         |
 |      #8      |    Robin Reyes    | rreyes15@mail.sfsu.edu|                 |     rrcodes                     |  Frontend Assistant |
 
 
