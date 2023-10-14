@@ -18,9 +18,11 @@
 |      #1      |     Alec Nagal    | anagal1@mail.sfsu.edu |    itsmeAlec    | aleccsucky/Alec Nagal(nickname) |        Lead         |
 |      #2      |     Kenneth pang  | Kpang3@sfsu.edu       |       AnbuXD    |       Kenneth#2091              |  Database Master    |
 |      #3      |    Ali Alsharif   |aalsharif@mail.sfsu.edu|  AliAlsharif99  |   AliAlsharif#9220 (mil3aga)    |  Frontend Lead      |
-|      #4      | Gabriella Arcilla |   garcilla2@sfsu.edu  | gabriellaarcilla|            gabya#6357           |  Git/Doc Master     |
+|      #4      | Gabriella Arcilla |   garcilla2@sfsu.edu  | gabriellaarcilla|            gabya#6357           |      Doc Master     |
 |      #5      |    Robel Ayelew   |   rayelew@sfsu.edu    |  RobelKasahun   |     Robel Ayelew / mr.handysam  |  Backend Assistant  |
-| #6      |           Gerry Putra        |            gputra@mail.sfsu.edu           |          gerry-putra       |                  Stormwatch#3908 (stormwatch)               |       Backend Lead              |
+|      #6      |   Gerry Putra     | gputra@mail.sfsu.edu  |   gerry-putra   |  Stormwatch#3908 (stormwatch)   |       Backend Lead  |
+|      #7      |    James Lu       |                       |                 |     JamesLu                     |  Git Master         |
+|      #8      |    Robin Reyes    | rreyes15@mail.sfsu.edu|                 |     rrcodes                     |  Frontend Assistant |
 
 
 4. All the team members must sign the team contract found [here](https://forms.gle/dxATAsa9isXKbcBn7). Missing signatures from students will result in these students being dropped from the course since this means that they disagree with the policies and terms needed to work in a team environment. 
