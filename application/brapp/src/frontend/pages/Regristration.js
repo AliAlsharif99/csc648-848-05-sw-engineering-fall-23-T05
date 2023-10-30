@@ -4,7 +4,6 @@ import './registration.css';
 
 function SignUp() {
   return (
-    <div>
       <div className="main-content">
         <h2 className="sign-up">Sign Up</h2>
         <div className="signup-form">
@@ -19,8 +18,6 @@ function SignUp() {
           <a href="/login" className="login-link">Already have an account? Login now!</a>
         </div>
       </div>
-      {/* footer*/}
-    </div>
   );
 }
 
