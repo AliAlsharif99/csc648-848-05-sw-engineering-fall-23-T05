@@ -10,7 +10,7 @@ function SignUp() {
           <div className="logo-container">
             <h1>BiteRate</h1>
           </div>
-          {/* Include your navbar component here */}
+          {/* Navbar */}
         </div>
       </header>
       <div className="main-content">
