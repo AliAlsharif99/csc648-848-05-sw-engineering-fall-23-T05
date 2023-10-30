@@ -5,14 +5,6 @@ import './registration.css';
 function SignUp() {
   return (
     <div>
-      <header>
-        <div className="header-wrapper">
-          <div className="logo-container">
-            <h1>BiteRate</h1>
-          </div>
-          {/* Navbar */}
-        </div>
-      </header>
       <div className="main-content">
         <h2 className="sign-up">Sign Up</h2>
         <div className="signup-form">
