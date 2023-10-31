@@ -7,6 +7,7 @@ import Search from './frontend/pages/Search';
 import Profile from './frontend/pages/Profile';
 import EditProfile from './frontend/pages/EditProfile';
 import SignUp from './frontend/pages/SignUp';
+import Lists from './frontend/pages/Lists';
 import { Route, Routes } from "react-router-dom"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/profile' element={<Profile/>} />
           <Route path='/edit-profile' element={<EditProfile />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/lists' element={<Lists />} />
         </Routes> 
     </div>
     </>

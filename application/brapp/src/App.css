@@ -256,3 +256,79 @@ header h1 {
   margin-top: 20px;
 }
 
+/* lists page */
+
+.listsHeader {
+  margin-left: 100px;
+  margin-bottom: 30px;
+  margin-top:0%;
+  font-family: 'Inter';
+  font-size: 45px;
+}
+
+.listsUl {
+  border-bottom: solid;
+  border-color: #565656;
+  color: #565656;
+  font-family: 'Inter';
+}
+
+.none {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.clicked {
+  font-weight: bold;
+}
+
+.tabList {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 100px;
+  font-size: 25px;
+}
+
+.addBold {
+  font-weight: bold;
+  color: black;
+}
+
+.resList {
+  margin-left: -40px;
+  padding: 40px 140px;
+  font-size: 40px;
+  color: black;
+  font-weight: 600;
+  border-bottom: solid;
+  border-color: #565656;
+  list-style-position: inside
+}
+
+.resContent {
+  font-size: 20px;
+  color: #565656;
+  margin-top: 5px;
+}
+
+.circle {
+  float: inline-end;
+  height: 90px;
+  width: 90px;
+  background-color: white;
+  border-radius: 50%;
+  color: #059178;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid #565656;
+  font-size: 45px;
+}
+
+.content {
+  font-family: 'Inter';
+}

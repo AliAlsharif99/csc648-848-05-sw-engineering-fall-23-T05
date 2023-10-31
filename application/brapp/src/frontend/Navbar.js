@@ -53,6 +53,9 @@ function Navbar() {
                 <li>
                     <Link to='/signup'>signup</Link>
                 </li>
+                <li>
+                    <Link to='/lists'>Lists</Link>
+                </li>
             </ul>
         </div>
 
