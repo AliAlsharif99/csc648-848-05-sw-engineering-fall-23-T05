@@ -27,11 +27,12 @@ body {
 .nav ul {
   padding: 0;
   margin: 0;
-  font-size: 13px;
+  font-size: 18px;
   list-style: none;
   display:flex;
   align-items: center;
   gap: 0.5rem;
+  text-shadow: 1px 2px 4px rgba(169, 169, 169, 0.63);
 }
 
 .nav a {
@@ -40,9 +41,10 @@ body {
 }
 
 .nav .site-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: #238965;
+  text-shadow: 3px 2px 4px rgba(169, 169, 169, 0.63);
 }
 
 .nav li:hover {
@@ -53,6 +55,7 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
+ 
 }
 
 .search-input {
@@ -84,6 +87,11 @@ body {
 }
 
 
+
+
+
+
+
 /* profile page */
 
 .profile-container {
@@ -94,6 +102,19 @@ body {
 
 .header {
   text-align: center;
+}
+
+.profile-pic-placeholder2 {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #666;
+  margin: auto;
 }
 
 .profile-pic {
@@ -184,6 +205,125 @@ body {
   margin-bottom: 1rem;
   border-radius: 5px;
 }
+
+
+
+
+/* edit profile*/
+
+.edit-title {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-profile-container {
+  position: relative;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.editpp-container {
+  display: flex;
+  justify-content: center;
+}
+
+.backbtn {
+  position: absolute;
+  left: calc(-10rem + 5px); /* Adjust this value based on the padding of the parent container */
+  top: 2rem; /* Match the top padding of the parent container */
+  width: 40px;             /* Set the width of the button */
+  height: 40px;            /* Set the height of the button */
+  border-radius: 50%;      /* Make it round */
+  font-size: 24px;         /* Size of the less than sign */
+  line-height: 50px;       /* Center the content vertically */
+  text-align: center;      /* Center the content horizontally */
+  border: 2px solid #238965;  /* Optional: sets the border of the button */
+  display: inline-block;   /* Allows width and height to be set */
+  background-color: #fff;  /* Optional: sets background color of the button */
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.edit-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Added padding won't affect width */
+}
+
+.submit-btn-container {
+  display: flex;        /* Use flexbox to arrange children */
+  justify-content: center; /* Center children horizontally in the container */
+  padding: 20px 0;     /* Add some padding at the top and bottom if needed */
+}
+ 
+.submit-btn {
+  text-align: center;
+  border-radius: 30px;
+  background-color: white;
+  width: 120px;
+  height: 35px;
+  font-size: small;
+}
+
+.submit-btn:hover{
+  background-color: #238965;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 250px; /* Adjust size as needed */
+  height: 250px; /* Adjust size as needed */
+  margin-bottom: 80px; /* Adjust spacing as needed */
+  display: block; /* Center the image in the container */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editpp-input {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.editpp2-input {
+  border: none;
+  background-color: white;
+  font-size:x-large;
+  color: #238965;
+  font-weight: 600;
+}
+
+.profile-pic-placeholder {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Makes it round */
+  background-color: #f3f3f3; /* Placeholder color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto; /* Center the placeholder in the container */
+  margin-bottom: 80px ;
+  cursor: pointer; /* Indicate that it's clickable */
+}
+
+.profile-pic-placeholder-content {
+  text-align: center;
+  color: #ccc; /* Placeholder text color */
+  font-size: 16px; /* Placeholder text size */
+}
+
+
+
+
+
 
 /* regristration page */
 

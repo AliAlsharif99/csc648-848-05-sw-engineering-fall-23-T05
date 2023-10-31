@@ -1,16 +1,28 @@
-import React from 'react'
+
 import Navbar from '../Navbar'
 import { FaNewspaper, FaUser, FaCheckCircle, FaBookmark, FaHeart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 
 function Profile() {
+
+  const [profilePic, setProfilePic] = useState('');
+
   return (
     <div className="Profile-container">
       
     <div className='header'>
       <h1>user's name</h1>
-      <img src="/path/to/profile/image.jpg" alt="User" className="profile-pic"/>
+      
+      {profilePic ? (
+      <img src={profilePic} alt="User" className="profile-pic"/>
+      ) : (
+        <div className="profile-pic-placeholder2">
+            <span>User</span>
+        </div>
+      )}
+
       <p>@username</p>
       <Link to="/edit-profile">
         <button className='edit-button'>Edit Profile</button>

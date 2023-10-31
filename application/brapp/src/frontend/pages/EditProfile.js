@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function EditProfile() {
   const [profileData, setProfileData] = useState({
-    profilePicture: '/path/to/profile/image.jpg',
+    profilePicture: '',
     username: 'username',
     name: 'User Name',
     bio: 'Your bio goes here',
@@ -18,67 +18,111 @@ function EditProfile() {
     });
   };
 
+  const handleProfilePictureChange = (e) => {
+    if (e.target.files.length > 0) {
+      const newProfilePictureURL = URL.createObjectURL(e.target.files[0]);
+      setProfileData({
+        ...profileData,
+        profilePicture: newProfilePictureURL,
+      });
+    }
+  };
+
   // Handle form submission (you can send the updated data to your backend here)
 
   return (
-    <div>
-      {/* Back to Profile button */}
-      <Link to="/profile">
-        <button>Back to Profile</button>
-      </Link>
+   
+<div className='edit-profile-container'>
+    <div className='edit-title'>
+        <h1>Edit Profile</h1>
+        <Link to="/profile">
+            <button className='backbtn'></button>
+        </Link>
+    </div>
 
-      {/* Profile Picture Section */}
-      <section>
-        <h2>Edit Profile Picture</h2>
-        <img
-          src={profileData.profilePicture}
-          alt="User"
-          className="profile-pic"
-        />
-        <input
-          type="text"
-          name="profilePicture"
-          value={profileData.profilePicture}
-          onChange={handleInputChange}
-        />
-        {/* Add an input or button to upload/change the profile picture */}
-      </section>
+    <div>
+      
+      <div className='editpp-container'>
+        {/* Profile Picture Section */}
+        <section>
+          <input 
+            id="profilePictureInput"
+            type="file"
+            accept="image/*"
+            onChange={handleProfilePictureChange}
+            style={{ display: 'none' }} // Hide the file input element
+          />
+
+          {profileData.profilePicture ? (
+          <label htmlFor="profilePictureInput">
+            <img
+              src={profileData.profilePicture}
+              alt="Profile"
+              className="profile-pic"
+              style={{ cursor: 'pointer' }} // Change cursor to indicate clickable
+            />
+          </label>
+
+            ) : (
+                <label htmlFor="profilePictureInput" className="profile-pic-placeholder">
+                    <div className="profile-pic-placeholder-content">Add Photo</div>
+                </label>
+                )}
+          
+    
+          <div className='editpp-input'>
+            <button
+            onClick={() => document.getElementById('profilePictureInput').click()}
+            className="editpp2-input">
+            Edit profile photo
+            </button>
+            </div>
+            </section>
+            </div>
 
       {/* Username Section */}
       <section>
-        <h2>Edit Username</h2>
+        <h2>Username</h2>
         <input
           type="text"
           name="username"
           value={profileData.username}
           onChange={handleInputChange}
+          className="edit-input"
         />
       </section>
 
       {/* Name Section */}
       <section>
-        <h2>Edit Name</h2>
+        <h2>Name</h2>
         <input
           type="text"
           name="name"
           value={profileData.name}
           onChange={handleInputChange}
+          className="edit-input"
         />
       </section>
 
       {/* Bio Section */}
       <section>
-        <h2>Edit Bio</h2>
+        <h2>Bio</h2>
         <textarea
           name="bio"
           value={profileData.bio}
           onChange={handleInputChange}
+          className="edit-input"
         />
       </section>
 
       {/* Save Changes Button */}
-      <button type="submit">Save Changes</button>
+      
+      <div className='submit-btn-container'>
+        <Link to="/profile"><button className='submit-btn' type="submit">Done</button></Link>
+      </div>
+
     </div>
+</div>
   );
 }
 
