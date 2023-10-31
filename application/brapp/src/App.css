@@ -3,22 +3,22 @@
 }
 
 body {
-  margin:0;
+  margin: 0;
 }
 
 /* nav bar */
 .nav {
   background-color: white;
-  color:black;
-  display:flex;
+  color: black;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:5rem;
+  padding: 5rem;
   padding-top: 3rem;
 }
 
 .nav-list-container {
-  flex-grow: 2;  /* This makes it take up the remaining space. */
+  flex-grow: 2; /* This makes it take up the remaining space. */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@ body {
   margin: 0;
   font-size: 13px;
   list-style: none;
-  display:flex;
+  display: flex;
   align-items: center;
   gap: 0.5rem;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 .nav li:hover {
-  color:darkgray;
+  color: darkgray;
 }
 
 .search-container {
@@ -83,7 +83,6 @@ body {
   background-color: #24664f;
 }
 
-
 /* profile page */
 
 .profile-container {
@@ -108,10 +107,9 @@ body {
   background-color: white;
   width: 100px;
   height: 25px;
-
 }
 
-.edit-button:hover{
+.edit-button:hover {
   background-color: #238965;
 }
 
@@ -121,22 +119,21 @@ body {
   margin-top: 1rem;
 }
 
-
 .followers {
   font-size: small;
-  color:rgb(65, 65, 65);
+  color: rgb(65, 65, 65);
   text-align: center;
 }
 
 .following {
   font-size: small;
-  color:rgb(65, 65, 65);
+  color: rgb(65, 65, 65);
   text-align: center;
 }
 
 .rank {
   font-size: small;
-  color:rgb(65, 65, 65);
+  color: rgb(65, 65, 65);
   text-align: center;
 }
 
@@ -146,8 +143,9 @@ body {
   margin-top: 2rem;
 }
 
-.restaurants, .recent-activity {
-  width: 48%;  /* Roughly half the width minus some space for margins */
+.restaurants,
+.recent-activity {
+  width: 48%; /* Roughly half the width minus some space for margins */
 }
 
 .activity-card {
@@ -155,7 +153,7 @@ body {
   padding: 1rem;
   margin-top: 0.5rem;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .restaurant-item {
@@ -164,21 +162,21 @@ body {
   padding: 1rem;
   margin-top: 0.5rem;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .activities-restaurants-section {
-  
   display: flex;
   justify-content: space-between;
   gap: 1rem; /* Adds spacing between the two sections */
 }
 
-.recent-activity, .restaurants {
+.recent-activity,
+.restaurants {
   flex: 1; /* Takes up equal width */
 }
 
-.activity-card{
+.activity-card {
   border: 1px solid #ddd;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -187,19 +185,19 @@ body {
 
 /* regristration page */
 
-.main-content{
+.main-content {
   position: absolute;
   max-width: 600px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   padding: 50px 60px 70px;
   background: rgb(190, 188, 188);
   border-radius: 25px;
 }
 
-.sign-up{
-  color:#004444;
+.sign-up {
+  color: #004444;
   font: bold;
 }
 
@@ -242,7 +240,7 @@ header h1 {
   background-color: #006666;
   border: none;
   border-radius: 3px;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -261,8 +259,8 @@ header h1 {
 .listsHeader {
   margin-left: 100px;
   margin-bottom: 30px;
-  margin-top:0%;
-  font-family: 'Inter';
+  margin-top: 0%;
+  font-family: "Inter";
   font-size: 45px;
 }
 
@@ -270,7 +268,7 @@ header h1 {
   border-bottom: solid;
   border-color: #565656;
   color: #565656;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .none {
@@ -305,7 +303,7 @@ header h1 {
   font-weight: 600;
   border-bottom: solid;
   border-color: #565656;
-  list-style-position: inside
+  list-style-position: inside;
 }
 
 .resContent {
@@ -330,5 +328,126 @@ header h1 {
 }
 
 .content {
-  font-family: 'Inter';
+  font-family: "Inter";
+}
+
+/* ----------- Robin CSS ----------- */
+.rest-name {
+  font-size: 76px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.rest-loc {
+  color: rgba(0, 0, 0, 0.535);
+  margin-bottom: 5px;
+}
+
+.listings {
+  display: flex;
+}
+
+.res-attributes {
+  display: flex;
+  list-style: none;
+  font-size: 12px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.res-attributes li {
+  color: #059178;
+  padding-right: 4px;
+}
+
+.res-attributes li:last-child::after {
+  content: "";
+}
+
+.res-attributes li::after {
+  content: " |";
+}
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.score {
+  font-size: 26px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 6px;
+  color: #059178;
+  font-weight: bold;
+}
+
+.left {
+  width: 600px;
+  position: relative;
+}
+
+.top {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+img {
+  border-radius: 4px;
+}
+
+.btn {
+  position: absolute;
+  font-size: 16px;
+  left: 35%;
+  bottom: -13%;
+  transform: translateY(0%);
+  background: #059178;
+  border: none;
+  color: rgba(255, 255, 255, 0.965);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 1s ease;
+}
+
+.btn:hover {
+  transform: translateY(-10%);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.popular-txt {
+  font-size: 28px;
+}
+.dishes {
+  display: flex;
+  gap: 58px;
+}
+
+.dish {
+  overflow: hidden;
+}
+
+.dish img {
+  transform: scale();
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.dish img:hover {
+  transform: scale(1.1);
 }
