@@ -55,7 +55,6 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
- 
 }
 
 .search-input {
@@ -85,11 +84,6 @@ body {
 .circle-button:hover {
   background-color: #24664f;
 }
-
-
-
-
-
 
 /* profile page */
 
@@ -204,14 +198,12 @@ body {
   border-radius: 5px;
 }
 
-.been, .want, .recs {
+.been,
+.want,
+.recs {
   text-decoration: none;
   color: black;
-  
 }
-
-
-
 
 /* edit profile*/
 
@@ -234,17 +226,19 @@ body {
 
 .backbtn {
   position: absolute;
-  left: calc(-10rem + 5px); /* Adjust this value based on the padding of the parent container */
+  left: calc(
+    -10rem + 5px
+  ); /* Adjust this value based on the padding of the parent container */
   top: 2rem; /* Match the top padding of the parent container */
-  width: 40px;             /* Set the width of the button */
-  height: 40px;            /* Set the height of the button */
-  border-radius: 50%;      /* Make it round */
-  font-size: 24px;         /* Size of the less than sign */
-  line-height: 50px;       /* Center the content vertically */
-  text-align: center;      /* Center the content horizontally */
-  border: 2px solid #238965;  /* Optional: sets the border of the button */
-  display: inline-block;   /* Allows width and height to be set */
-  background-color: #fff;  /* Optional: sets background color of the button */
+  width: 40px; /* Set the width of the button */
+  height: 40px; /* Set the height of the button */
+  border-radius: 50%; /* Make it round */
+  font-size: 24px; /* Size of the less than sign */
+  line-height: 50px; /* Center the content vertically */
+  text-align: center; /* Center the content horizontally */
+  border: 2px solid #238965; /* Optional: sets the border of the button */
+  display: inline-block; /* Allows width and height to be set */
+  background-color: #fff; /* Optional: sets background color of the button */
 }
 
 .profile-pic {
@@ -263,11 +257,11 @@ body {
 }
 
 .submit-btn-container {
-  display: flex;        /* Use flexbox to arrange children */
+  display: flex; /* Use flexbox to arrange children */
   justify-content: center; /* Center children horizontally in the container */
-  padding: 20px 0;     /* Add some padding at the top and bottom if needed */
+  padding: 20px 0; /* Add some padding at the top and bottom if needed */
 }
- 
+
 .submit-btn {
   text-align: center;
   border-radius: 30px;
@@ -277,7 +271,7 @@ body {
   font-size: small;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
   background-color: #238965;
 }
 
@@ -294,13 +288,12 @@ body {
 .editpp-input {
   display: flex;
   justify-content: center;
-  
 }
 
 .editpp2-input {
   border: none;
   background-color: white;
-  font-size:x-large;
+  font-size: x-large;
   color: #238965;
   font-weight: 600;
 }
@@ -314,7 +307,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto; /* Center the placeholder in the container */
-  margin-bottom: 80px ;
+  margin-bottom: 80px;
   cursor: pointer; /* Indicate that it's clickable */
 }
 
@@ -323,11 +316,6 @@ body {
   color: #ccc; /* Placeholder text color */
   font-size: 16px; /* Placeholder text size */
 }
-
-
-
-
-
 
 /* regristration page */
 
@@ -596,4 +584,68 @@ img {
 
 .dish img:hover {
   transform: scale(1.1);
+}
+
+.review-ui {
+  position: absolute;
+  background-color: #059178;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 4px;
+  z-index: 100;
+  height: 400px;
+  width: 750px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-ui button {
+  align-self: center;
+}
+
+.review-ui p {
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.review-ui textarea {
+  border: none;
+  text-decoration: none;
+  resize: none;
+  border-radius: 4px;
+  margin: 0px 20px;
+  margin-bottom: 20px;
+}
+
+.x {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+
+.thanks {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  top: 35%;
+  transition: all 0.4s ease;
+}
+
+/* animation for UI */
+.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
 }
