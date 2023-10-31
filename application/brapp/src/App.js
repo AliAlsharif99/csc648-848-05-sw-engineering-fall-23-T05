@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Restaurant />
+      {/* <Restaurant /> */}
       <div className="container">
         <Routes>
           <Route path="/home" element={<Home />} />
