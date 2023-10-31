@@ -204,6 +204,12 @@ body {
   border-radius: 5px;
 }
 
+.been, .want, .recs {
+  text-decoration: none;
+  color: black;
+  
+}
+
 
 
 

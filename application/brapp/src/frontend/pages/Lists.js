@@ -1,10 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../App.css';
 import { IoIosLock } from "react-icons/io";
+import { useLocation } from 'react-router-dom';
 
 const Lists = () => {
     const [show, setShow] = useState(1);
     const tabLabels = document.querySelectorAll('[data-tab-label]');
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state && location.state.activeTab === 'been') {
+          setShow(1);
+        } else if (location.state && location.state.activeTab === 'wantToTry') {
+          setShow(2);
+        } else if (location.state && location.state.activeTab === 'recs') {
+          setShow(3);
+        } else {
+          setShow(1); // default to the first tab if no activeTab is provided
+        }
+    }, [location]);
 
     const clickedTab = (num) => {
         setShow(num);

@@ -43,6 +43,7 @@ function Profile() {
           <p>Biterate Rank</p>
         </div>
     </div>
+    
 
     <div className="activities-restaurants-section">
         <div className="recent-activity">
@@ -54,11 +55,17 @@ function Profile() {
 
         <div className="restaurants">
             <h2>  <FaUser/> Restaurants</h2>
-            <h3>  <FaCheckCircle/> Been</h3>
+              <Link to={{ pathname: "/lists", state: { activeTab: 'been' } }}>
+                <div className='been'><h3>  <FaCheckCircle/> Been</h3></div>
+              </Link>
             <hr></hr>
-            <h3> <FaBookmark/> Want to try</h3>
+              <Link to={{ pathname: "/lists", state: { activeTab: 'wantToTry' } }}>
+                <div className='want'><h3> <FaBookmark/> Want to try</h3></div>
+              </Link>
             <hr></hr>
-            <h3> <FaHeart/> Recs for You</h3>
+              <Link to={{ pathname: "/lists", state: { activeTab: 'recs' } }}>
+                <div className='recs'><h3> <FaHeart/> Recs for You</h3></div>
+              </Link>
         </div>
     </div>
              
