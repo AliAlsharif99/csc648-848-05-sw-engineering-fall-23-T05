@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import '../../App.css';
 import { IoIosLock } from "react-icons/io";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import '../../App.css';
+
 
 const Lists = () => {
     const [show, setShow] = useState(1);
@@ -27,6 +28,11 @@ const Lists = () => {
         });
     }
 
+    const navigate = useNavigate();
+    const goToRestaurantPage = () => {
+        navigate('/restaurant');
+      };
+
     return (
         <div>
             <h1 className='listsHeader'>
@@ -42,7 +48,7 @@ const Lists = () => {
                 <div className={show === 1 ? 'active' : 'none'}>
                     <p>
                         <ol>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -50,7 +56,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -58,7 +64,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -66,7 +72,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -80,7 +86,7 @@ const Lists = () => {
                 <div className={show === 2 ? 'active' : 'none'}>
                     <p>
                         <ol>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -88,7 +94,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -96,7 +102,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -104,7 +110,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -118,7 +124,7 @@ const Lists = () => {
                 <div className={show === 3 ? 'active' : 'none'}>
                     <p>
                         <ol>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -126,7 +132,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -134,7 +140,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -142,7 +148,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -156,7 +162,7 @@ const Lists = () => {
                 <div className={show === 4 ? 'active' : 'none'}>
                     <p>
                         <ol>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -164,7 +170,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -172,7 +178,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
@@ -180,7 +186,7 @@ const Lists = () => {
                                     <br /> Address
                                 </p>
                             </li>
-                            <li className='resList'>
+                            <li className='resList' onClick={goToRestaurantPage}>
                                 Restaurant Name
                                 <div class='circle'><IoIosLock /></div>
                                 <p className='resContent'>
