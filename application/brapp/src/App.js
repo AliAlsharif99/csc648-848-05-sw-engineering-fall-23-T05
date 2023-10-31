@@ -5,6 +5,8 @@ import Leaderboard from './frontend/pages/Leaderboard';
 import MeetTheTeam from './frontend/pages/MeetTheTeam';
 import Search from './frontend/pages/Search';
 import Profile from './frontend/pages/Profile';
+import EditProfile from './frontend/pages/EditProfile';
+import SignUp from './frontend/pages/SignUp';
 import { Route, Routes } from "react-router-dom"
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
           <Route path='/meettheteam' element={<MeetTheTeam/>} />
           <Route path='/search' element={<Search/>} />
           <Route path='/profile' element={<Profile/>} />
+          <Route path='/edit-profile' element={<EditProfile />} />
+          <Route path='/signup' element={<SignUp />} />
         </Routes> 
     </div>
     </>

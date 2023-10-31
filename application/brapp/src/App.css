@@ -6,6 +6,7 @@ body {
   margin:0;
 }
 
+/* nav bar */
 .nav {
   background-color: white;
   color:black;
@@ -81,6 +82,9 @@ body {
 .circle-button:hover {
   background-color: #24664f;
 }
+
+
+/* profile page */
 
 .profile-container {
   padding: 2rem;

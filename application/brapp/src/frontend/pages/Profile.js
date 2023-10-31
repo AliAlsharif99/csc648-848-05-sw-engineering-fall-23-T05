@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import { FaNewspaper, FaUser, FaCheckCircle, FaBookmark, FaHeart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 function Profile() {
   return (
@@ -10,7 +12,9 @@ function Profile() {
       <h1>user's name</h1>
       <img src="/path/to/profile/image.jpg" alt="User" className="profile-pic"/>
       <p>@username</p>
-      <button className='edit-button'>Edit Profile</button>
+      <Link to="/edit-profile">
+        <button className='edit-button'>Edit Profile</button>
+      </Link>
     </div>
 
     <div className="follow-info">
