@@ -19,7 +19,8 @@ body {
 }
 
 .nav-list-container {
-  flex-grow: 2; /* This makes it take up the remaining space. */
+  flex-grow: 2;
+  /* This makes it take up the remaining space. */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +65,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 20px;
   transition: width 0.3s, opacity 0.3s;
-  width: 10; /* initially set to 0 */
+  width: 10;
+  /* initially set to 0 */
   opacity: 50;
 }
 
@@ -74,12 +76,14 @@ body {
   justify-content: center;
   width: 25px;
   height: 25px;
-  border-radius: 50%; /* makes it circular */
+  border-radius: 50%;
+  /* makes it circular */
   border: none;
   cursor: pointer;
   background-color: #238965;
   color: white;
-  font-size: 25px; /* adjust as needed */
+  font-size: 25px;
+  /* adjust as needed */
   font-weight: 10px;
 }
 
@@ -162,7 +166,8 @@ body {
 
 .restaurants,
 .recent-activity {
-  width: 48%; /* Roughly half the width minus some space for margins */
+  width: 48%;
+  /* Roughly half the width minus some space for margins */
 }
 
 .activity-card {
@@ -185,12 +190,14 @@ body {
 .activities-restaurants-section {
   display: flex;
   justify-content: space-between;
-  gap: 1rem; /* Adds spacing between the two sections */
+  gap: 1rem;
+  /* Adds spacing between the two sections */
 }
 
 .recent-activity,
 .restaurants {
-  flex: 1; /* Takes up equal width */
+  flex: 1;
+  /* Takes up equal width */
 }
 
 .activity-card {
@@ -228,9 +235,7 @@ body {
 
 .backbtn {
   position: absolute;
-  left: calc(
-    -10rem + 5px
-  ); 
+  left: calc(-10rem + 5px);
   top: 2rem;
   width: 40px;
   height: 40px;
@@ -255,13 +260,17 @@ body {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  box-sizing: border-box; /* Added padding won't affect width */
+  box-sizing: border-box;
+  /* Added padding won't affect width */
 }
 
 .submit-btn-container {
-  display: flex; /* Use flexbox to arrange children */
-  justify-content: center; /* Center children horizontally in the container */
-  padding: 20px 0; /* Add some padding at the top and bottom if needed */
+  display: flex;
+  /* Use flexbox to arrange children */
+  justify-content: center;
+  /* Center children horizontally in the container */
+  padding: 20px 0;
+  /* Add some padding at the top and bottom if needed */
 }
 
 .submit-btn {
@@ -279,10 +288,14 @@ body {
 
 .profile-pic {
   border-radius: 50%;
-  width: 250px; /* Adjust size as needed */
-  height: 250px; /* Adjust size as needed */
-  margin-bottom: 80px; /* Adjust spacing as needed */
-  display: block; /* Center the image in the container */
+  width: 250px;
+  /* Adjust size as needed */
+  height: 250px;
+  /* Adjust size as needed */
+  margin-bottom: 80px;
+  /* Adjust spacing as needed */
+  display: block;
+  /* Center the image in the container */
   margin-left: auto;
   margin-right: auto;
 }
@@ -303,20 +316,26 @@ body {
 .profile-pic-placeholder {
   width: 250px;
   height: 250px;
-  border-radius: 50%; /* Makes it round */
-  background-color: #f3f3f3; /* Placeholder color */
+  border-radius: 50%;
+  /* Makes it round */
+  background-color: #f3f3f3;
+  /* Placeholder color */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto; /* Center the placeholder in the container */
+  margin: auto;
+  /* Center the placeholder in the container */
   margin-bottom: 80px;
-  cursor: pointer; /* Indicate that it's clickable */
+  cursor: pointer;
+  /* Indicate that it's clickable */
 }
 
 .profile-pic-placeholder-content {
   text-align: center;
-  color: #ccc; /* Placeholder text color */
-  font-size: 16px; /* Placeholder text size */
+  color: #ccc;
+  /* Placeholder text color */
+  font-size: 16px;
+  /* Placeholder text size */
 }
 
 /* regristration page */
@@ -511,6 +530,7 @@ header h1 {
 .res-attributes li::after {
   content: " |";
 }
+
 .cont {
   display: flex;
   justify-content: center;
@@ -575,6 +595,7 @@ img {
 .popular-txt {
   font-size: 28px;
 }
+
 .dishes {
   display: flex;
   gap: 58px;
@@ -682,11 +703,11 @@ thead {
   overflow: hidden;
 }
 
-.leaderboard-table > thead > th {
+.leaderboard-table>thead>th {
   padding: 20px;
 }
 
-td{
+td {
   border-bottom: 1px solid #F0E6E6;
   padding: 10px;
 }
@@ -728,7 +749,7 @@ td{
   top: 11px;
 }
 
-.number-of-visits{
+.number-of-visits {
   float: left;
 }
 
@@ -738,6 +759,7 @@ td{
   margin: auto;
   overflow: hidden;
 }
+
 /************* End of Styling for Leaderboard *************/
 
 
@@ -790,11 +812,14 @@ ul {
 /* Style for the follow buttons */
 .follower-item button {
   padding: 5px 10px;
-  border: 1px solid #000000; /* Border color is green now */
+  border: 1px solid #000000;
+  /* Border color is green now */
   border-radius: 20px;
-  background-color: #ffffff; /* Background is white */
+  background-color: #ffffff;
+  /* Background is white */
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-  color: #000000; /* Text color is green now */
+  color: #000000;
+  /* Text color is green now */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -813,25 +838,99 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh; /* viewport height */
+  height: 50vh;
+  /* viewport height */
 
 }
 
 /* Centered content wrapper */
 .content-wrapper {
-  width: 95%; /* or whatever width you desire */
+  width: 95%;
+  /* or whatever width you desire */
   background-color: #ffffff;
 }
 
 .following-picture {
-  width: 40px; 
+  width: 40px;
   height: 40px;
-  border-radius: 50%; 
-  background-color: #d4d4d4; 
-  margin-right: 15px; 
-  flex-shrink: 0; 
+  border-radius: 50%;
+  background-color: #d4d4d4;
+  margin-right: 15px;
+  flex-shrink: 0;
 }
 
 .follower-item span {
   flex-grow: 1;
 }
+
+/************* Styling for MeettheTeam *************/
+
+.meettheteam-container {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mtt-title {
+  text-align: center;
+}
+
+.teams {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.teammate-image {
+  width: 300px;
+  height: 300px;
+}
+
+.card-group {
+  display: block;
+  width: 65%;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  text-align: center;
+  display: inline-block;
+  border: 1px solid rgb(240, 234, 234);
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.paragraph {
+  width: 500px;
+  text-align: justify;
+  line-height: 30px;
+  margin: 30px;
+}
+
+.team-paragraph {
+  float: left;
+  position: relative;
+  top: 85px;
+}
+
+.team-image {
+  width: 650px;
+  height: 600px;
+  border-radius: 100%;
+  margin: 30px;
+}
+
+.mid-content {
+  overflow: hidden;
+  width: 60%;
+  padding: 20px 120px;
+  margin: auto;
+}
+
+/************* End of Styling for MeettheTeam *************/
