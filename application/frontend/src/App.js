@@ -5,8 +5,9 @@ import Leaderboard from "./resources/pages/Leaderboard";
 import MeetTheTeam from "./resources/pages/MeetTheTeam";
 import Search from "./resources/pages/Search";
 import Profile from "./resources/pages/Profile";
-import EditProfile from "./resources/pages/Profile";
+import EditProfile from "./resources/pages/EditProfile";
 import SignUp from "./resources/pages/SignUp";
+import Login from "./resources/pages/Login";
 import Lists from "./resources/pages/Lists";
 import Restaurant from "./resources/pages/Restaurant";
 import { Route, Routes } from "react-router-dom";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/edit-profile" element={<EditProfile />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/lists" element={<Lists />} />
           <Route path="/restaurant" element={<Restaurant />}></Route>
         </Routes>

@@ -52,12 +52,19 @@ function Navbar() {
           <li>
             <Link to="/profile">Profile</Link>
           </li>
+          <p>/</p>
           <li>
-            <Link to="/signup">signup</Link>
+            <Link to="/signup">Signup</Link>
           </li>
+          <p>/</p>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <p>/</p>
           <li>
             <Link to="/lists">Lists</Link>
           </li>
+          <p>/</p>
           <li>
             <Link to="/restaurant">Restaurant</Link>
           </li>
