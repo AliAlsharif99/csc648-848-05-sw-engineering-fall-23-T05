@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* nav bar */
@@ -45,6 +46,7 @@ body {
   font-weight: 900;
   color: #238965;
   text-shadow: 3px 2px 4px rgba(169, 169, 169, 0.63);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .nav li:hover {
@@ -228,17 +230,17 @@ body {
   position: absolute;
   left: calc(
     -10rem + 5px
-  ); /* Adjust this value based on the padding of the parent container */
-  top: 2rem; /* Match the top padding of the parent container */
-  width: 40px; /* Set the width of the button */
-  height: 40px; /* Set the height of the button */
-  border-radius: 50%; /* Make it round */
-  font-size: 24px; /* Size of the less than sign */
-  line-height: 50px; /* Center the content vertically */
-  text-align: center; /* Center the content horizontally */
-  border: 2px solid #238965; /* Optional: sets the border of the button */
-  display: inline-block; /* Allows width and height to be set */
-  background-color: #fff; /* Optional: sets background color of the button */
+  ); 
+  top: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  border: 2px solid #238965;
+  display: inline-block;
+  background-color: #fff;
 }
 
 .profile-pic {
@@ -326,11 +328,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 50px 60px 70px;
-  background: rgb(190, 188, 188);
+  background: rgb(217, 217, 217);
   border-radius: 25px;
 }
 
 .sign-up {
+  color: #004444;
+  font: bold;
+}
+
+.log-in {
   color: #004444;
   font: bold;
 }
@@ -347,15 +354,15 @@ header h1 {
 }
 
 .main-content {
-  padding: 100px 50px;
+  padding: 25px;
   text-align: center;
-  width: 900px;
+  width: 750px;
   margin: auto;
 }
 
 .signup-form {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .signup-form input[type="text"],
@@ -363,15 +370,15 @@ header h1 {
 .signup-form input[type="password"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 3px;
 }
 
 .signup-btn {
-  width: 106%;
+  width: 100%;
   padding: 15px;
-  background-color: #006666;
+  background-color: #238965;
   border: none;
   border-radius: 3px;
   color: #fff;
@@ -380,7 +387,7 @@ header h1 {
 }
 
 .signup-btn:hover {
-  background-color: #004444;
+  background-color: #186147;
 }
 
 .login-link {
@@ -394,7 +401,7 @@ header h1 {
   margin-left: 100px;
   margin-bottom: 30px;
   margin-top: 0%;
-  font-family: "Inter";
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 45px;
 }
 
@@ -402,7 +409,7 @@ header h1 {
   border-bottom: solid;
   border-color: #565656;
   color: #565656;
-  font-family: "Inter";
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .none {
