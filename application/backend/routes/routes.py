@@ -1,17 +1,18 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for, session
+from flask import Blueprint, render_template, request, flash, redirect, url_for, session, jsonify
 from ..controllers import controllers
 
 bp = Blueprint('routes', __name__)
 
 
-@bp.route('/')
+@bp.route('/api/home')
 def home():
     restaurants = controllers.get_top_rated_restaurants()
 
     user_data = None
     if 'user_id' in session:
         user_data = controllers.get_user_by_id(session['user_id'])
-    return render_template('home.html', restaurants=restaurants, user=user_data)
+    print(restaurants)
+    return jsonify({"restaurants": restaurants, "user": user_data})
 
 
 @bp.route('/registration', methods=['GET', 'POST'])
