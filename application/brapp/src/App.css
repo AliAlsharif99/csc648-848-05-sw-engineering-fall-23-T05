@@ -650,3 +650,85 @@ img {
   opacity: 0;
   pointer-events: none;
 }
+
+
+/************* Styling for Leaderboard *************/
+.leaderboard-container {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.leaderboard-title {
+  text-align: center;
+}
+
+thead {
+  background-color: #ECE7E7;
+}
+
+.leaderboard-table {
+  width: 70%;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+  overflow: hidden;
+}
+
+.leaderboard-table > thead > th {
+  padding: 20px;
+}
+
+td{
+  border-bottom: 1px solid #F0E6E6;
+  padding: 10px;
+}
+
+.profile-pic {
+  margin: 0;
+  padding: 0;
+  background-color: #059178;
+  width: 50px;
+  height: 50px;
+  float: left;
+  display: block;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.leaderboard-user-name {
+  float: left;
+  top: 3px;
+  position: relative;
+  left: 10px;
+}
+
+.leaderboard-name-data {
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+
+.restaurant-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  position: relative;
+  top: 11px;
+}
+
+.number-of-visits{
+  float: left;
+}
+
+.leaderboard-restarant-visited {
+  width: 55px;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+}
+/************* End of Styling for Leaderboard *************/
