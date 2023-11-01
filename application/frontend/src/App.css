@@ -739,3 +739,99 @@ td{
   overflow: hidden;
 }
 /************* End of Styling for Leaderboard *************/
+
+
+
+/************* following *************/
+/* Style for the search container */
+.search-following-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the search input */
+.search-following-container input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-follwoing-container input:focus {
+  border-color: #007BFF;
+}
+
+/* Style for the followers list */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for each follower item */
+.follower-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.follower-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Style for the follow buttons */
+.follower-item button {
+  padding: 5px 10px;
+  border: 1px solid #000000; /* Border color is green now */
+  border-radius: 20px;
+  background-color: #ffffff; /* Background is white */
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  color: #000000; /* Text color is green now */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.follower-item button:hover {
+  background-color: #238965;
+}
+
+/* Style for the button when the user is being followed */
+.follower-item button[disabled] {
+  background-color: #d4d4d4;
+  cursor: not-allowed;
+}
+
+.following-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* viewport height */
+
+}
+
+/* Centered content wrapper */
+.content-wrapper {
+  width: 95%; /* or whatever width you desire */
+  background-color: #ffffff;
+}
+
+.following-picture {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%; 
+  background-color: #d4d4d4; 
+  margin-right: 15px; 
+  flex-shrink: 0; 
+}
+
+.follower-item span {
+  flex-grow: 1;
+}

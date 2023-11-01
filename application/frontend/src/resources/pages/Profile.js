@@ -32,11 +32,11 @@ function Profile() {
     <div className="follow-info">
         <div className='followers'>
           <strong>10.2k</strong>
-          <p>Followers</p>
+          <Link to="/followers"><p>Followers</p></Link>
         </div>
         <div className='following'>
           <strong>1</strong>
-          <p>Following</p>
+          <Link to="/following"><p>Following</p></Link>
         </div>
         <div className='rank'>
           <strong>#19</strong>

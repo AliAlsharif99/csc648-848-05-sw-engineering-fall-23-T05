@@ -10,7 +10,9 @@ import SignUp from "./resources/pages/SignUp";
 import Login from "./resources/pages/Login";
 import Lists from "./resources/pages/Lists";
 import Restaurant from "./resources/pages/Restaurant";
+import Following from "./resources/pages/Following";
 import { Route, Routes } from "react-router-dom";
+import Followers from "./resources/pages/Followers";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/lists" element={<Lists />} />
           <Route path="/restaurant" element={<Restaurant />}></Route>
+          <Route path="/following" element={<Following />}></Route>
+          <Route path="/followers" element={<Followers />}></Route>
         </Routes>
       </div>
     </>
