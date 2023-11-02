@@ -13,6 +13,15 @@ function toggleReserve() {
   res.classList.toggle("show");
 }
 
+function toggleReserveEnd() {
+  const header = document.querySelector(".reserve-header");
+  const form = document.querySelector(".reserve-form");
+  const ui = document.querySelector(".reserve-ui");
+  ui.classList.add("hide");
+  form.classList.add("hide");
+  header.classList.add("hide");
+}
+
 function toggleThankYou() {
   const head = document.querySelector(".review-header");
   const text = document.querySelector(".review-textarea");
@@ -23,6 +32,12 @@ function toggleThankYou() {
   btn.classList.add("hide");
   reviewForm.classList.add("hide");
 }
+
+// function toggleReserveThanks(e) {
+//   e.preventDefault();
+//   const reserveForm = document.querySelector(".reserve-form");
+//   reserveForm.classList.add("hide");
+// }
 
 function Restaurant() {
   // restaurant info
@@ -101,12 +116,12 @@ function Restaurant() {
         </form>
         <textarea className="review-textarea" rows="10" cols="40"></textarea>
         <button
-          className="review-btn"
+          className="review-btn btn-white"
           onClick={toggleThankYou}
           type="submit"
           width="100px"
         >
-          submit
+          Submit
         </button>
         <p className="thanks">Thank you!</p>
         <img src={x} height="20px" className="x" onClick={toggleReview}></img>
@@ -116,6 +131,38 @@ function Restaurant() {
 
   const reserveUI = (
     <div className="review-ui reserve-ui">
+      <p className="review-header reserve-header">
+        Book your seat at Fuki Ramen!
+      </p>
+      <form className="reserve-form">
+        <div className="cntr-form">
+          <label for="reserve-name">Full Name</label>
+          <input type="text" id="reserve-name" placeholder="robin"></input>
+        </div>
+        <div className="cntr-form">
+          <label for="reserve-date">Date of Reservation</label>
+          <input type="date" placeholder="mm/dd/yy"></input>
+        </div>
+        <div className="cntr-form">
+          <label for="reserve-time">Time</label>
+          <select name="time" id="reserve-time">
+            <option value="4:30PM">4:30PM</option>
+            <option value="4:30PM">5:00PM</option>
+            <option value="4:30PM">6:30PM</option>
+            <option value="4:30PM">7:00PM</option>
+            <option value="4:30PM">8:15PM</option>
+            <option value="4:30PM">9:00PM</option>
+          </select>
+        </div>
+        <button
+          className="review-btn btn-green"
+          onClick={toggleThankYou}
+          type="submit"
+          width="100px"
+        >
+          Submit
+        </button>
+      </form>
       <img src={x} height="20px" className="x" onClick={toggleReserve}></img>
     </div>
   );

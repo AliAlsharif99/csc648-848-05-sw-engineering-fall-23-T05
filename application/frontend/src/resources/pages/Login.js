@@ -1,18 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Navbar'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-function Login() { 
+function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:5005/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert('Logged in successfully!', data);
+        navigate('/home'); // Adjust the route as needed
+      } else {
+        alert('Failed to log in');
+      }
+    } catch (error) {
+        alert('Error during login:', error);
+    }
+  };
+
   return (
     <div className="main-content">
       <h2 className="sign-up">Login</h2>
       <div className="signup-form">
-        <form action="/registration" method="post">
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="password" name="password" placeholder="Password" required />
+        <form onSubmit={handleSubmit}>
+          <input type="email" name="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="password" name="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
           <button type="submit" className="signup-btn">Submit</button>
         </form>
-        <a href="/signup" className="login-link">Don't have an account? Signup now!</a>
+        <Link to="/signup" className="login-link">Don't have an account? Signup now!</Link>
       </div>
     </div>
   );

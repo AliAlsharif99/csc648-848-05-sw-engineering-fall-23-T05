@@ -1,7 +1,13 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for, session, jsonify
+from flask import Blueprint, render_template, request, make_response, redirect, url_for, session, jsonify
 from ..controllers import controllers
 
 bp = Blueprint('routes', __name__)
+
+
+@bp.route('/api/')
+def landing():
+    restaurants = controllers.get_top_rated_restaurants()
+    return jsonify({"restaurants": restaurants})
 
 
 @bp.route('/api/home')
@@ -11,59 +17,45 @@ def home():
     user_data = None
     if 'user_id' in session:
         user_data = controllers.get_user_by_id(session['user_id'])
-    print(restaurants)
     return jsonify({"restaurants": restaurants, "user": user_data})
 
 
-@bp.route('/registration', methods=['GET', 'POST'])
+@bp.route('/api/registration', methods=['POST'])
 def registration():
-    if request.method == 'POST':
-        first_name = request.form.get('first_name')
-        last_name = request.form.get('last_name')
-        email = request.form.get('email')
-        password = request.form.get('password')
+    data = request.get_json()
+    first_name = data.get('first_name')
+    last_name = data.get('last_name')
+    email = data.get('email')
+    password = data.get('password')
 
-        # Check if user already exist...
-        existing_user = controllers.get_user_by_email(email)
-        if existing_user:
-            #flash('Email already registered. Please use a different email.', 'danger')
-            print('Email already registered. Please use a different email.')
-            return redirect(url_for('routes.registration'))
+    # Check if user already exists...
+    existing_user = controllers.get_user_by_email(email)
+    if existing_user:
+        return make_response(jsonify({'message': 'Email already registered. Please use a different email.'}), 400)
 
-        controllers.add_user(first_name, last_name, password, email)
-
-        # flash('Registration successful!', 'success')
-        print('Registration successful!')
-        return redirect(url_for('routes.login'))
-
-    return render_template('registration.html')
+    controllers.add_user(first_name, last_name, password, email)
+    return make_response(jsonify({'message': 'Registration successful!'}), 201)
 
 
-@bp.route('/login', methods=['GET', 'POST'])
+@bp.route('/api/login', methods=['POST'])
 def login():
-    # Check if the user is already logged in
     if 'user_id' in session:
-        # flash('You are already logged in!', 'info')
         print('You are already logged in!')
-        return redirect(url_for('routes.home'))
+        return jsonify({"message": "Already logged in"}), 200
 
-    if request.method == 'POST':
-        email = request.form.get('email')
-        password = request.form.get('password')
+    data = request.get_json()
+    email = data.get('email')
+    password = data.get('password')
 
-        user_instance = controllers.verify_user(email, password)
+    user_instance = controllers.verify_user(email, password)
 
-        if user_instance:
-            session['user_id'] = user_instance.user_id
-            # flash('Logged in successfully!', 'success')
-            print('Logged in successfully!')
-            return redirect(url_for('routes.home'))
-        else:
-            # flash('Invalid email or password', 'danger')
-            print('Invalid email or password')
-            return redirect(url_for('routes.login'))
-
-    return render_template('login.html')
+    if user_instance:
+        session['user_id'] = user_instance.user_id
+        print('Logged in successfully!')
+        return jsonify({"message": "Logged in successfully!"}), 200
+    else:
+        print('Invalid email or password')
+        return jsonify({"message": "Invalid email or password"}), 401
 
 
 @bp.route('/logout')
