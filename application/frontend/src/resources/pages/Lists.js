@@ -37,7 +37,7 @@ const Lists = () => {
         <div className="page-container">
             <div>
                 <h1 className='listsHeader'>
-                    Lists
+                    Feed
                 </h1>
                 <ul className='listsUl'>
                     <li onClick={() => clickedTab(1)} data-tab-label className={`tabList ${show === 1 ? 'addBold' : ''}`}>Been</li>

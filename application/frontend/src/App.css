@@ -49,6 +49,10 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
+.nav li {
+  padding: 1rem;
+}
+
 .nav li:hover {
   color: darkgray;
 }
@@ -59,35 +63,14 @@ body {
   gap: 2rem;
 }
 
+
+
 .search-input {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 20px;
-  transition: width 0.3s, opacity 0.3s;
-  width: 10;
-  /* initially set to 0 */
+  width: 25rem;
   opacity: 50;
-}
-
-.circle-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  /* makes it circular */
-  border: none;
-  cursor: pointer;
-  background-color: #238965;
-  color: white;
-  font-size: 25px;
-  /* adjust as needed */
-  font-weight: 10px;
-}
-
-.circle-button:hover {
-  background-color: #24664f;
 }
 
 /* profile page */
@@ -1147,21 +1130,25 @@ ul {
   cursor: pointer;
   outline: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px; /* Adjust or remove margin as needed */
+  margin: 10px;
 }
 
 .back-btn:hover {
-  background-color: #238965; /* Slightly darker on hover */
+  background-color: #238965; 
 }
 
+.signup-login {
+  display: flex;
+  justify-content: flex-end;
+}
 
 /***follower-picture**/
 .follower-picture {
-  width: 50px; /* Example size */
-  height: 50px; /* Example size */
-  border-radius: 50%; /* Makes it circular */
-  object-fit: cover; /* Ensures the image covers the area */
-  margin-right: 10px; /* Adds some space between the image and the name */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 

@@ -36,26 +36,21 @@ function Navbar() {
             <Link to="/meettheteam">Meet The Team</Link>
           </li>
           <li>
-            <Link to="/search">Search</Link>
+            <Link to="/lists">Feed</Link>
           </li>
           <li>
             <Link to="/profile">Profile</Link>
           </li>
+          <div className="search-input-container">
+            <input type="text" placeholder="Search..." className="search-input" />
+          </div>
+          <div></div>
           <li>
             <Link to="/signup">Signup</Link>
           </li>
           <li>
             <Link to="/login">Login</Link>
           </li>
-          <li>
-            <Link to="/lists">Lists</Link>
-          </li>
-          <li>
-            <Link to="/restaurant">Restaurant</Link>
-          </li>
-          <div className="search-input-container">
-            <input type="text" placeholder="Search..." className="search-input" />
-          </div>
         </ul>
       </div>
     </nav>
