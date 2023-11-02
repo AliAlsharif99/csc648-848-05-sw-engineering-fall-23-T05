@@ -74,20 +74,16 @@ function MeetTheTeam() {
 
         <div className='team-paragraph'>
 
-          <p className='paragraph'>Eliot & I met in NYC after undergrad and built our relationship around
-            restaurants in the city. We were constantly looking for the very best
-            places, but we struggled to find reliable reviews and a good place to
-            track our adventures.</p>
+          <p className='paragraph'> The 8 of us meet in Jose Ortiz 648 Software Engineering class and was forced to make a web 
+          application for him so we could graduate. We were going to do a budgeting app. he said no... so here we are with Biterate a
+          social media app to help you find the best restuarnts for you. </p>
 
-          <p className='paragraph'>Our journey brought us to Harvard Business School where we were determined to 
-     build a solution that allowed food lovers to consistently find and track  the best
-                                        restaurants. We envisioned a product where yu no onger had to  serchone that 
-         knew your tastes and told you the places that you would love at the click of a button!</p>
+          <p className='paragraph'> Biterate is a solution that allowed food lovers to consistently find and track the best
+            restaurants. This product is where you no longer had to search. Instead it
+         knows your tastes and told you the places that you would love at the click of a button!</p>
             
           <p className='paragraph'>
-            That led to the creation of Beli. We have spent the last year working tirelessly 
-                                  to build an app that will substantially improve the lives of people like us.
-          We are excited you are here checking out what Beli has to offer and hope you
+            We are excited to be almost done with this website!
           </p>
         </div>
 

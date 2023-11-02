@@ -1015,9 +1015,10 @@ ul {
 
 .card {
   text-align: center;
+  
   display: inline-block;
   border: 1px solid rgb(240, 234, 234);
-  margin: 10px;
+  margin: 60px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
@@ -1028,7 +1029,7 @@ ul {
 }
 
 .paragraph {
-  width: 500px;
+  width: 750px;
   text-align: justify;
   line-height: 30px;
   margin: 30px;
@@ -1037,14 +1038,14 @@ ul {
 .team-paragraph {
   float: left;
   position: relative;
-  top: 85px;
+  top: 10px;
 }
 
 .team-image {
   width: 650px;
   height: 600px;
   border-radius: 100%;
-  margin: 30px;
+  margin: 70px;
 }
 
 .mid-content {
@@ -1052,6 +1053,10 @@ ul {
   width: 60%;
   padding: 20px 120px;
   margin: auto;
+}
+
+.teammate-name {
+  font-weight: 700;
 }
 
 /************* End of Styling for MeettheTeam *************/

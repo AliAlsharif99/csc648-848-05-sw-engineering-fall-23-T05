@@ -6,7 +6,7 @@ db = SQLAlchemy()
 
 
 def create_app():
-    app = Flask(__name__, template_folder="../frontend/templates", static_folder="../frontend/static")
+    app = Flask(__name__, template_folder="../frontend/templates", static_folder="../frontend/src")
     # Cross-Origin Resource Sharing (CORS) : With this, will allow our React app to make requests to our Flask server
     CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
     app.secret_key = 'bite_rate_app session_config secret_key'
