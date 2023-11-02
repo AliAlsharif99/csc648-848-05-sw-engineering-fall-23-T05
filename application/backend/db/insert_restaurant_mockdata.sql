@@ -19,21 +19,21 @@ INSERT INTO `biteRateDB`.`Restaurant` (`name`, `cuisine`, `address`, `open_date`
 
 -- Mock data for biteRateDB.ImageURL
 INSERT INTO biteRateDB.ImageURL (image_url) VALUES
-('../static/resources/images/restaurant_image1.jpg'),
-('../static/resources/images/restaurant_image2.jpg'),
-('../static/resources/images/restaurant_image3.jpg'),
-('../static/resources/images/restaurant_image4.jpg'),
-('../static/resources/images/restaurant_image5.jpg'),
-('../static/resources/images/restaurant_image6.jpg'),
-('../static/resources/images/restaurant_image7.jpg'),
-('../static/resources/images/restaurant_image8.jpg'),
-('../static/resources/images/restaurant_image9.jpg'),
-('../static/resources/images/restaurant_image10.jpg'),
-('../static/resources/images/restaurant_image11.jpg'),
-('../static/resources/images/restaurant_image12.jpg'),
-('../static/resources/images/restaurant_image13.jpg'),
-('../static/resources/images/restaurant_image14.jpg'),
-('../static/resources/images/restaurant_image15.jpg');
+('restaurant_image1.jpg'),
+('restaurant_image2.jpg'),
+('restaurant_image3.jpg'),
+('restaurant_image4.jpg'),
+('restaurant_image5.jpg'),
+('restaurant_image6.jpg'),
+('restaurant_image7.jpg'),
+('restaurant_image8.jpg'),
+('restaurant_image9.jpg'),
+('restaurant_image10.jpg'),
+('restaurant_image11.jpg'),
+('restaurant_image12.jpg'),
+('restaurant_image13.jpg'),
+('restaurant_image14.jpg'),
+('restaurant_image15.jpg');
 
 
 -- Mock data for biteRateDB.ImageURL
