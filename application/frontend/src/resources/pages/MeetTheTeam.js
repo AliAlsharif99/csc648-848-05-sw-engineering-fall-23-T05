@@ -16,7 +16,13 @@ function MeetTheTeam() {
       <h1 className='mtt-title'>Meet the Team</h1>
 
       <div className='teams'>
-        <div className='card-group'>
+        <div className='card-group'>          
+          <div className='card'>
+            <img src={team_4} className='teammate-image' />
+            <p className='teammate-name'>Alec Nagal</p>
+            <p className='teammate-title'>Team Lead</p>
+          </div>
+
           <div className='card'>
             <img src={team_1} className='teammate-image' />
             <p className='teammate-name'>Gabriella Arcilla</p>
@@ -40,17 +46,14 @@ function MeetTheTeam() {
             <p className='teammate-name'>Robel Ayelew</p>
             <p className='teammate-title'>Backend Engineer</p>
           </div>
+
           <div className='card'>
             <img src={team_5} className='teammate-image' />
             <p className='teammate-name'>Gerry Putra</p>
             <p className='teammate-title'>Lead Backend Engineer</p>
           </div>
 
-          <div className='card'>
-            <img src={team_4} className='teammate-image' />
-            <p className='teammate-name'>Alec Nagal</p>
-            <p className='teammate-title'>Team Lead</p>
-          </div>
+          
 
           <div className='card'>
             <img src={team_7} className='teammate-image' />
@@ -74,20 +77,19 @@ function MeetTheTeam() {
 
         <div className='team-paragraph'>
 
-          <p className='paragraph'> The 8 of us meet in Jose Ortiz 648 Software Engineering class and was forced to make a web 
-          application for him so we could graduate. We were going to do a budgeting app. he said no... so here we are with Biterate a
-          social media app to help you find the best restuarnts for you. </p>
+          
 
-          <p className='paragraph'> Biterate is a solution that allowed food lovers to consistently find and track the best
+          <p className='paragraph'> Biterate is a solution that allows food lovers to consistently find and track the best
             restaurants. This product is where you no longer had to search. Instead it
-         knows your tastes and told you the places that you would love at the click of a button!</p>
+            knows your tastes and tells you the places that you would love at the click of a button!</p>
             
           <p className='paragraph'>
             We are excited to be almost done with this website!
           </p>
+          <img src={team} className='team-image' />
         </div>
 
-        <img src={team} className='team-image' />
+        
 
       </div>
                           

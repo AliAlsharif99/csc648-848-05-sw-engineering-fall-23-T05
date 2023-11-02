@@ -44,7 +44,7 @@ function Login() {
           <input type="password" name="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
           <button type="submit" className="signup-btn">Submit</button>
         </form>
-        <Link to="/signup" className="login-link">Don't have an account? Signup now!</Link>
+        <Link to="/signup" className="login-link">Don't have an account?</Link>
       </div>
       </div>
       </div>

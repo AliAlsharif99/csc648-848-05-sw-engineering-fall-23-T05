@@ -105,7 +105,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; /* Center the profile pic horizontally */
+  margin: 0 auto;
 }
 
 .edit-button {
@@ -143,8 +143,8 @@ body {
 }
 
 .followers a {
-  text-decoration: none; /* Remove underline from links */
-  color: rgb(65, 65, 65); /* Set the link color */
+  text-decoration: none; 
+  color: rgb(65, 65, 65); 
 }
 
 .following {
@@ -154,8 +154,8 @@ body {
 }
 
 .following a {
-  text-decoration: none; /* Remove underline from links */
-  color: rgb(65, 65, 65); /* Set the link color */
+  text-decoration: none; 
+  color: rgb(65, 65, 65); 
 }
 
 .rank {
@@ -173,7 +173,6 @@ body {
 .restaurants,
 .recent-activity {
   width: 48%;
-  /* Roughly half the width minus some space for margins */
 }
 
 .activity-card {
@@ -197,13 +196,11 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  /* Adds spacing between the two sections */
 }
 
 .recent-activity,
 .restaurants {
   flex: 1;
-  /* Takes up equal width */
 }
 
 .activity-card {
@@ -213,7 +210,7 @@ body {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
-  position: relative; /* Add position relative to the card container */
+  position: relative;
 }
 
 .activity-header {
@@ -229,18 +226,18 @@ body {
 }
 
 .activity-info {
-  flex-grow: 1; /* Allow the info to expand and take available space */
+  flex-grow: 1;
 }
 
 .activity-place {
-  text-align: center; /* Center the text within its container */
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 
 .activity-location {
   color: #666;
-  margin: 0 auto; /* Center the text horizontally */
-  text-align: center; /* Center the text within its container */
+  margin: 0 auto;
+  text-align: center;
 }
 
 .activity-comment {
@@ -265,8 +262,8 @@ body {
 }
 
 .remove-underline {
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Inherit the text color from its parent (black by default) */
+  text-decoration: none;
+  color: inherit;
 }
 
 /* edit profile*/
@@ -316,16 +313,12 @@ body {
   padding: 10px;
   margin-bottom: 20px;
   box-sizing: border-box;
-  /* Added padding won't affect width */
 }
 
 .submit-btn-container {
   display: flex;
-  /* Use flexbox to arrange children */
   justify-content: center;
-  /* Center children horizontally in the container */
   padding: 20px 0;
-  /* Add some padding at the top and bottom if needed */
 }
 
 .submit-btn {
@@ -344,13 +337,9 @@ body {
 .profile-pic {
   border-radius: 50%;
   width: 250px;
-  /* Adjust size as needed */
   height: 250px;
-  /* Adjust size as needed */
   margin-bottom: 80px;
-  /* Adjust spacing as needed */
   display: block;
-  /* Center the image in the container */
   margin-left: auto;
   margin-right: auto;
 }
@@ -372,25 +361,19 @@ body {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  /* Makes it round */
   background-color: #f3f3f3;
-  /* Placeholder color */
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
-  /* Center the placeholder in the container */
   margin-bottom: 80px;
   cursor: pointer;
-  /* Indicate that it's clickable */
 }
 
 .profile-pic-placeholder-content {
   text-align: center;
   color: #ccc;
-  /* Placeholder text color */
   font-size: 16px;
-  /* Placeholder text size */
 }
 
 /* regristration page */
@@ -960,13 +943,11 @@ ul {
   justify-content: center;
   align-items: center;
   height: 50vh;
-  /* viewport height */
 }
 
 /* Centered content wrapper */
 .content-wrapper {
   width: 95%;
-  /* or whatever width you desire */
   background-color: #ffffff;
 }
 
@@ -1001,20 +982,19 @@ ul {
 }
 
 .teammate-image {
+  object-fit: cover;
   width: 300px;
   height: 300px;
 }
 
 .card-group {
-  display: block;
-  width: 65%;
-  margin: auto;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+  grid-gap: 20px;
 }
 
 .card {
   text-align: center;
-  display: inline-block;
   border: 1px solid rgb(240, 234, 234);
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1028,29 +1008,26 @@ ul {
 
 .paragraph {
   width: 750px;
-  text-align: justify;
+  text-align: center;
   line-height: 30px;
-  margin: 30px;
+  margin: 20px auto;
 }
 
 .team-paragraph {
-  float: left;
+  text-align: center;
   position: relative;
-  top: 130px;
 }
 
 .team-image {
   width: 450px;
   height: 400px;
   border-radius: 100%;
-  margin: 70px;
-  display: block;
 }
 
 .mid-content {
-  overflow: hidden;
-  width: 60%;
-  padding: 20px 100px;
+  position: relative;
+  width: 65%;
+  padding: 20px 225px;
   margin: auto;
 }
 
@@ -1125,7 +1102,7 @@ ul {
   border-radius: 50%;
   background-color: #f5f5f5;
   text-align: center;
-  line-height: 45px; /* Adjust this to vertically center the arrow if needed */
+  line-height: 45px;
   font-size: 20px;
   cursor: pointer;
   outline: none;
@@ -1161,26 +1138,26 @@ ul {
   border-radius: 50%;
   background-color: #f5f5f5;
   text-align: center;
-  line-height: 45px; /* Adjust this to vertically center the arrow if needed */
+  line-height: 45px;
   font-size: 20px;
   cursor: pointer;
   outline: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px; /* Adjust or remove margin as needed */
+  margin: 10px;
 }
 
 .back-btn:hover {
-  background-color: #238965; /* Slightly darker on hover */
+  background-color: #238965;
 }
 
 
 /***follower-picture**/
 .follower-picture {
-  width: 50px; /* Example size */
-  height: 50px; /* Example size */
-  border-radius: 50%; /* Makes it circular */
-  object-fit: cover; /* Ensures the image covers the area */
-  margin-right: 10px; /* Adds some space between the image and the name */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 /* footer */

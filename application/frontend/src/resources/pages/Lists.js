@@ -17,7 +17,7 @@ const Lists = () => {
         } else if (location.state && location.state.activeTab === 'recs') {
           setShow(3);
         } else {
-          setShow(1); // default to the first tab if no activeTab is provided
+          setShow(1);
         }
     }, [location]);
 
@@ -37,7 +37,7 @@ const Lists = () => {
         <div className="page-container">
             <div>
                 <h1 className='listsHeader'>
-                    Feed
+                    Lists
                 </h1>
                 <ul className='listsUl'>
                     <li onClick={() => clickedTab(1)} data-tab-label className={`tabList ${show === 1 ? 'addBold' : ''}`}>Been</li>

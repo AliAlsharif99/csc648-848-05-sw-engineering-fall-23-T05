@@ -103,10 +103,10 @@ function SignUp() {
             value={formData.confirmPassword}
           />
           <button type="submit" className="signup-btn">
-            Submit
+            Create Account
           </button>
         </form>
-        <a href="/login" className="login-link">Already have an account? Login now!</a>
+        <a href="/login" className="login-link">Already have an account?</a>
       </div>
     </div>
     </div>

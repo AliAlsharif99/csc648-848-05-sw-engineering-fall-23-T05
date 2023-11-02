@@ -51,7 +51,7 @@ function Navbar() {
             <Link to="/meettheteam">Meet The Team</Link>
           </li>
           <li>
-            <Link to="/lists">Feed</Link>
+            <Link to="/lists">Lists</Link>
           </li>
           <li>
             <Link to="/profile">Profile</Link>

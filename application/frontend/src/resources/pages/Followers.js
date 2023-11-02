@@ -31,7 +31,7 @@ function Followers() {
 
   // Function to handle back navigation
   const goBack = () => {
-    navigate(-1); // This will take you back to the previous page
+    navigate(-1);
    
   };
 

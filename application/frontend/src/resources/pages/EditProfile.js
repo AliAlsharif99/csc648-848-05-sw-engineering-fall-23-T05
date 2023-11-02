@@ -8,7 +8,7 @@ function EditProfile() {
 
   // Function to handle back navigation
   const goBack = () => {
-    navigate(-1); // This will take you back to the previous page
+    navigate(-1);
    
   };
 
@@ -38,8 +38,6 @@ function EditProfile() {
     }
   };
 
-  // Handle form submission (you can send the updated data to your backend here)
-
   return (
    
 <div className='edit-profile-container'>
@@ -61,7 +59,7 @@ function EditProfile() {
             type="file"
             accept="image/*"
             onChange={handleProfilePictureChange}
-            style={{ display: 'none' }} // Hide the file input element
+            style={{ display: 'none' }}
           />
 
           {profileData.profilePicture ? (
@@ -70,7 +68,7 @@ function EditProfile() {
               src={profileData.profilePicture}
               alt="Profile"
               className="profile-pic"
-              style={{ cursor: 'pointer' }} // Change cursor to indicate clickable
+              style={{ cursor: 'pointer' }}
             />
           </label>
 
