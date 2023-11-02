@@ -20,7 +20,6 @@ body {
 
 .nav-list-container {
   flex-grow: 2;
-  /* This makes it take up the remaining space. */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +127,7 @@ body {
 
 .edit-button {
   border-radius: 20px;
-  background-color: white;
+  background-color: #d9d9d9;
   width: 100px;
   height: 25px;
 }
@@ -413,6 +412,11 @@ body {
   border-radius: 25px;
 }
 
+.page-container {
+  min-height: 100vh; 
+  flex-direction: column;
+}
+
 .sign-up {
   color: #004444;
   font: bold;
@@ -462,7 +466,7 @@ header h1 {
   background-color: #238965;
   border: none;
   border-radius: 3px;
-  color: #fff;
+  color: #000000;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -958,6 +962,7 @@ ul {
 
 .following-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50vh;
@@ -1115,3 +1120,75 @@ ul {
 }
 
 /************* End of Styling for Search *************/
+
+/* footer */
+.footer {
+  background-color: #d9d9d9;
+  padding: 30px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-hidden {
+  display: none;
+}
+
+.social-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  margin: 50px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+}
+
+.social-logo img {
+  margin-left: 10px;
+  width: 30px; 
+  height: 30px; 
+}
+
+/* burger navbar */
+
+.burger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger-icon {
+    display: block;
+  }
+  .nav-list-container {
+    display: none;
+  }
+}
+
+.burger-icon.open .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.burger-icon.open .bar2 {
+  .change .bar2 {opacity: 0;}
+}
+
+.burger-icon.open .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}

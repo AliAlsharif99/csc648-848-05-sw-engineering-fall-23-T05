@@ -18,16 +18,18 @@ function Home() {
   }, []); // Empty dependency array means this effect runs once after initial render
 
   return (
-    <div className='home-container'>
-      <div>
-        <h1>Home</h1>
+    <div className="page-container">
+      <div className='home-container'>
         <div>
-          <h2>User Data:</h2>
-          <pre>{JSON.stringify(userData, null, 2)}</pre>
-        </div>
-        <div>
-          <h2>Restaurants:</h2>
-          <pre>{JSON.stringify(restaurants, null, 2)}</pre>
+          <h1>Home</h1>
+          <div>
+            <h2>User Data:</h2>
+            <pre>{JSON.stringify(userData, null, 2)}</pre>
+          </div>
+          <div>
+            <h2>Restaurants:</h2>
+            <pre>{JSON.stringify(restaurants, null, 2)}</pre>
+          </div>
         </div>
       </div>
     </div>

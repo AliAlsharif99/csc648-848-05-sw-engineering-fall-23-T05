@@ -1,29 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [searchVisible, setSearchVisible] = useState(false);
-  const searchContainerRef = useRef(null);
+  const [burgerVisible, setBurgerVisible] = useState(false);
 
-  const toggleSearch = () => {
-    setSearchVisible(true);
+  const toggleBurger = () => {
+    setBurgerVisible(!burgerVisible);
   };
 
-  const handleClickOutside = (event) => {
-    if (
-      searchContainerRef.current &&
-      !searchContainerRef.current.contains(event.target)
-    ) {
-      setSearchVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const burgerClass = burgerVisible ? "burger-icon open" : "burger-icon";
 
   return (
     <nav className="nav">
@@ -31,54 +16,47 @@ function Navbar() {
         BiteRate
       </Link>
 
-      <div className="nav-list-container">
+      <div className="burger-container" onClick={toggleBurger}>
+        <div className={burgerClass}>
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
+        </div>
+      </div>
+
+      <div className={`nav-list-container ${burgerVisible ? "open" : ""}`}>
         <ul>
           <li>
             <Link to="/home">Home</Link>
           </li>
-          <p>/</p>
           <li>
             <Link to="/leaderboard">Leaderboard</Link>
           </li>
-          <p>/</p>
           <li>
             <Link to="/meettheteam">Meet The Team</Link>
           </li>
-          <p>/</p>
           <li>
             <Link to="/search">Search</Link>
           </li>
-          <p>/</p>
           <li>
             <Link to="/profile">Profile</Link>
           </li>
-          <p>/</p>
           <li>
             <Link to="/signup">Signup</Link>
           </li>
-          <p>/</p>
           <li>
             <Link to="/login">Login</Link>
           </li>
-          <p>/</p>
           <li>
             <Link to="/lists">Lists</Link>
           </li>
-          <p>/</p>
           <li>
             <Link to="/restaurant">Restaurant</Link>
           </li>
+          <div className="search-input-container">
+            <input type="text" placeholder="Search..." className="search-input" />
+          </div>
         </ul>
-      </div>
-
-      <div className="search-container" ref={searchContainerRef}>
-        {searchVisible ? (
-          <input type="text" placeholder="Search..." className="search-input" />
-        ) : (
-          <button className="circle-button" onClick={toggleSearch}>
-            +
-          </button>
-        )}
       </div>
     </nav>
   );

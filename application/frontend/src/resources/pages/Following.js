@@ -22,23 +22,24 @@ const FollowerItem = ({ name, isFollowing }) => {
 
 function Following() {
   return (
+    <div className="page-container">
+      <div className='following-container'>
     
-    <div className='following-container'>
-
-    <div className='content-wrapper'>
-
-        
-      <div className="search-following-container">
-          <input type="text" placeholder="Search Followers" />
+      <div className='content-wrapper'>
+    
+          
+        <div className="search-following-container">
+            <input type="text" placeholder="Search Followers" />
+        </div>
+    
+        <ul>
+            {followersData.map((follower, index) => (
+              <FollowerItem key={index} {...follower} />
+            ))}
+        </ul>
       </div>
-
-      <ul>
-          {followersData.map((follower, index) => (
-            <FollowerItem key={index} {...follower} />
-          ))}
-      </ul>
-    </div>
-
+            
+      </div>
     </div>
   )
 }

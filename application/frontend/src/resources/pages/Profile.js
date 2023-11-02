@@ -1,5 +1,4 @@
 
-import Navbar from '../Navbar'
 import { FaNewspaper, FaUser, FaCheckCircle, FaBookmark, FaHeart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
@@ -34,7 +33,7 @@ function Profile() {
 
     <div className="follow-info">
         
-        <Link to="/following" className='remove-underline'>
+        <Link to="/followers" className='remove-underline'>
         <div className='followers'>
           <strong>10.2k</strong>
           <p>Followers</p>

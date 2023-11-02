@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Navbar'
 import cutlery from "../images/cutlery.png"
 import profile_rank_1 from "../images/profile_rank_1.jpeg"
 import profile_rank_2 from "../images/profile_rank_2.jpeg"
@@ -11,6 +10,7 @@ import { Link } from 'react-router-dom'
 
 function Leaderboard() {
   return (
+    <div className="page-container">
     <div className='leaderboard-container'>
       <h1 className='leaderboard-title'>Leaderboard</h1>
 
@@ -138,6 +138,7 @@ function Leaderboard() {
           </tr>
         </tbody>
       </table>
+    </div>
     </div>
   )
 }

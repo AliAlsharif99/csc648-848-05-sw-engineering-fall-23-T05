@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./resources/Navbar";
+import Footer from "./resources/Footer";
 import Home from "./resources/pages/Home";
 import Leaderboard from "./resources/pages/Leaderboard";
 import MeetTheTeam from "./resources/pages/MeetTheTeam";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/followers" element={<Followers />}></Route>
         </Routes>
       </div>
+      <Footer /> 
     </>
   );
 }
