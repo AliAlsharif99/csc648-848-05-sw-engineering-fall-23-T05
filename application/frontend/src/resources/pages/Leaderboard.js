@@ -6,6 +6,7 @@ import profile_rank_3 from "../images/profile_rank_3.jpeg"
 import profile_rank_4 from "../images/profile_rank_4.jpeg"
 import profile_rank_5 from "../images/profile_rank_5.jpeg"
 import user1 from "../images/user1.jpg";
+import user2 from "../images/user2.jpg";
 import { Link } from 'react-router-dom'
 
 function Leaderboard() {
@@ -104,8 +105,8 @@ function Leaderboard() {
             <td>
               <div className='leaderboard-name-data'>
                 <Link to="/profile">
-                  <img src={profile_rank_5} className='profile-pic' />
-                  <p className='leaderboard-user-name'>John Davis</p>
+                  <img src={user2} className='profile-pic' />
+                  <p className='leaderboard-user-name'>Suguru Geto</p>
                 </Link>
               </div>
             </td>

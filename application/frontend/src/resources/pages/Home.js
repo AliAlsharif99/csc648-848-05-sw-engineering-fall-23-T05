@@ -7,7 +7,7 @@ function Home() {
 
   useEffect(() => {
     // Fetch data from the Flask backend when the component mounts
-    fetch('http://localhost:5005/api/home')
+    fetch('http://127.0.0.1:5005/api/home')
       .then(response => response.json())
       .then(data => {
         // Update state with the fetched data

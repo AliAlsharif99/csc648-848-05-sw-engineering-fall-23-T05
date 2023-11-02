@@ -4,6 +4,12 @@ from ..controllers import controllers
 bp = Blueprint('routes', __name__)
 
 
+@bp.route('/api/')
+def landing():
+    restaurants = controllers.get_top_rated_restaurants()
+    return jsonify({"restaurants": restaurants})
+
+
 @bp.route('/api/home')
 def home():
     restaurants = controllers.get_top_rated_restaurants()
@@ -31,31 +37,25 @@ def registration():
     return make_response(jsonify({'message': 'Registration successful!'}), 201)
 
 
-@bp.route('/login', methods=['GET', 'POST'])
+@bp.route('/api/login', methods=['POST'])
 def login():
-    # Check if the user is already logged in
     if 'user_id' in session:
-        # flash('You are already logged in!', 'info')
         print('You are already logged in!')
-        return redirect(url_for('routes.home'))
+        return jsonify({"message": "Already logged in"}), 200
 
-    if request.method == 'POST':
-        email = request.form.get('email')
-        password = request.form.get('password')
+    data = request.get_json()
+    email = data.get('email')
+    password = data.get('password')
 
-        user_instance = controllers.verify_user(email, password)
+    user_instance = controllers.verify_user(email, password)
 
-        if user_instance:
-            session['user_id'] = user_instance.user_id
-            # flash('Logged in successfully!', 'success')
-            print('Logged in successfully!')
-            return redirect(url_for('routes.home'))
-        else:
-            # flash('Invalid email or password', 'danger')
-            print('Invalid email or password')
-            return redirect(url_for('routes.login'))
-
-    return render_template('login.html')
+    if user_instance:
+        session['user_id'] = user_instance.user_id
+        print('Logged in successfully!')
+        return jsonify({"message": "Logged in successfully!"}), 200
+    else:
+        print('Invalid email or password')
+        return jsonify({"message": "Invalid email or password"}), 401
 
 
 @bp.route('/logout')

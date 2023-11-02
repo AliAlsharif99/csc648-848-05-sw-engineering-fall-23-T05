@@ -1,31 +1,47 @@
 import React from 'react'
 import Navbar from '../Navbar'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import {FaArrowLeft } from 'react-icons/fa';
+import user2 from "../images/user2.jpg";
 
 const followersData = [
-    { name: 'Elon Musk', isFollowing: false },
-    { name: 'Tommy Cat', isFollowing: false },
-    { name: 'Kruomi Kur', isFollowing: false },
-    { name: 'Jack Frost', isFollowing: false },
-    { name: 'Santa L', isFollowing: false },
+    { name: 'Suguru Geto', isFollowing: false, imgSrc: {user2} },
+    { name: 'Suguru Geto', isFollowing: false, imgSrc: {user2} },
+    { name: 'Suguru Geto', isFollowing: false, imgSrc: {user2} },
+    { name: 'Suguru Geto', isFollowing: false, imgSrc: {user2} },
+    { name: 'Suguru Geto', isFollowing: false, imgSrc: {user2} },
   ];
 
-const FollowerItem = ({ name, isFollowing }) => {
+const FollowerItem = ({ name, isFollowing, imgSrc}) => {
   return (
-    <li className="follower-item">
-        <div className="following-picture"></div> 
-      <span>{name}</span>
-      <button>{isFollowing} {isFollowing ? 'Following' : 'Follow'}</button>
-    </li>
+    <Link to="/followers2" className='remove-underline'>
+      <li className="follower-item">
+        {imgSrc && <img src={user2} alt={name} className="follower-picture" />}
+        <span>{name}</span>
+        <button onClick={(e) => e.stopPropagation()}>{isFollowing ? 'Following' : 'Follow'}</button>
+      </li>
+    </Link>
+    
   );
 };
 
 function Followers() {
+
+  let navigate = useNavigate();
+
+  // Function to handle back navigation
+  const goBack = () => {
+    navigate(-1); // This will take you back to the previous page
+   
+  };
+
   return (
     <div className="page-container">
       <div className='following-container'>
     
       <div className='content-wrapper'>
+
+    <button onClick={goBack} className="back-btn"><FaArrowLeft/></button>
     
           
         <div className="search-following-container">
