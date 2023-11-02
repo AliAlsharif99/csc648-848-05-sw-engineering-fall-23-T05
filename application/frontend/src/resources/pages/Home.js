@@ -1,39 +1,51 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from '../Navbar'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import RestaurantThumbnail from '../RestaurantThumbnail';
+import '../styles/Home.css';
 
 function Home() {
-  const [userData, setUserData] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch data from the Flask backend when the component mounts
-    fetch('http://127.0.0.1:5005/api/home')
-      .then(response => response.json())
-      .then(data => {
-        // Update state with the fetched data
-        setUserData(data.user);
-        setRestaurants(data.restaurants);
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  }, []); // Empty dependency array means this effect runs once after initial render
+    async function fetchData() {
+      try {
+        const response = await fetch('http://127.0.0.1:5005/api/home', {
+            method: 'GET',
+            credentials: 'include',
+        });
+        if (response.ok) {
+          const data = await response.json();
+          setRestaurants(data.restaurants);
+          setUser(data.user);
+          console.log(data.user)
+        } else {
+          console.error('Server Error: ', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+      }
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="page-container">
-      <div className='home-container'>
-        <div>
-          <h1>Home</h1>
-          <div>
-            <h2>User Data:</h2>
-            <pre>{JSON.stringify(userData, null, 2)}</pre>
-          </div>
-          <div>
-            <h2>Restaurants:</h2>
-            <pre>{JSON.stringify(restaurants, null, 2)}</pre>
-          </div>
+      <div className="landing-page">
+        <div className="banner">
+          <h1>Welcome To BiteRate {user && `${user.first_name} ${user.last_name}`}</h1>
+          <p>Track and share your favorite restaurants with your friends!</p>
+        </div>
+        <h2>Recommended Restaurants</h2>
+        <div className="restaurant-list">
+          {restaurants.map((restaurant) => (
+            <RestaurantThumbnail key={restaurant.restaurant_id} restaurant={restaurant} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-export default Home
+export default Home;

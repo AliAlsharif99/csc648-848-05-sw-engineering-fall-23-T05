@@ -1,0 +1,63 @@
+.landing-page {
+  text-align: center;
+}
+
+.carousel-container {
+  height: 500px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.banner {
+  padding: 50px;
+  background-color: #f0f0f0;
+  margin-bottom: 50px;
+}
+
+.banner button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.restaurant-thumbnail {
+  width: 30%;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  margin-bottom: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-thumbnail img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.restaurant-thumbnail h3,
+.restaurant-thumbnail p {
+  margin: 10px 0;
+}
+

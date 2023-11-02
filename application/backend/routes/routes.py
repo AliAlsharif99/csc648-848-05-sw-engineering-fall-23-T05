@@ -17,6 +17,7 @@ def home():
     user_data = None
     if 'user_id' in session:
         user_data = controllers.get_user_by_id(session['user_id'])
+    print(user_data)
     return jsonify({"restaurants": restaurants, "user": user_data})
 
 
