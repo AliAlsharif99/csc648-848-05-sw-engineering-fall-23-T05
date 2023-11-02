@@ -8,6 +8,11 @@ function toggleReview() {
   elem.classList.toggle("show");
 }
 
+function toggleReserve() {
+  const res = document.querySelector(".reserve-ui");
+  res.classList.toggle("show");
+}
+
 function toggleThankYou() {
   const head = document.querySelector(".review-header");
   const text = document.querySelector(".review-textarea");
@@ -39,6 +44,12 @@ function Restaurant() {
   const reviewButton = (
     <button className="btn" onClick={toggleReview}>
       Leave a Review!
+    </button>
+  );
+
+  const reserveButton = (
+    <button className="btn" onClick={toggleReserve}>
+      Book your seat!
     </button>
   );
 
@@ -103,6 +114,12 @@ function Restaurant() {
     </>
   );
 
+  const reserveUI = (
+    <div className="review-ui reserve-ui">
+      <img src={x} height="20px" className="x" onClick={toggleReserve}></img>
+    </div>
+  );
+
   const score1 = <p className="score">7.8</p>;
   const score2 = <p className="score">8.4</p>;
   const recScore = "Rec Score";
@@ -112,16 +129,21 @@ function Restaurant() {
     <>
       <div className="top">
         <div className="left">
-          <h1>{restaurantName}</h1>
-          <p>{restaurantLocation}</p>
-          <div>{resAttributes}</div>
-          <div className="cont">
-            {score1}
-            {recScore}
-            {score2}
-            {friendScore}
+          <div className="text">
+            <h1>{restaurantName}</h1>
+            <p>{restaurantLocation}</p>
+            <div>{resAttributes}</div>
+            <div className="cont">
+              {score1}
+              {recScore}
+              {score2}
+              {friendScore}
+            </div>
           </div>
-          {reviewButton}
+          <div className="btns">
+            {reviewButton}
+            {reserveButton}
+          </div>
         </div>
         <img
           src={pic}
@@ -157,6 +179,7 @@ function Restaurant() {
       </div>
 
       {reviewUI}
+      {reserveUI}
     </>
   );
 }
