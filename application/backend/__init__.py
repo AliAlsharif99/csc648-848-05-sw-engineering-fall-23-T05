@@ -14,7 +14,8 @@ def create_app():
     app.secret_key = 'bite_rate_app session_config secret_key'
 
     # Database configuration
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:oldschool@localhost/biteRateDB'
+    app.config['SQLALCHEMY_DATABASE_URI'] \
+        = 'mysql+pymysql://admin:oldschool@biteratedb-proto.cnoyllr6qcmr.us-east-2.rds.amazonaws.com:3306/biteRateDB'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Disable tracking to save resources
 
     # Session cookie configurations

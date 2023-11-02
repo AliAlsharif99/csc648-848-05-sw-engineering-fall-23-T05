@@ -11,7 +11,7 @@ function Home() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('http://127.0.0.1:5005/api/home', {
+        const response = await fetch('http://3.19.239.176:5005/api/home', {
             method: 'GET',
             credentials: 'include',
         });

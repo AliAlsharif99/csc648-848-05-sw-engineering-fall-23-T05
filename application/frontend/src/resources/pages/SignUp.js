@@ -31,7 +31,7 @@ function SignUp() {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:5005/api/registration', {
+      const response = await fetch('http://3.19.239.176:5005/api/registration', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
