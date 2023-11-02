@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [burgerVisible, setBurgerVisible] = useState(false);
@@ -9,6 +9,21 @@ function Navbar() {
   };
 
   const burgerClass = burgerVisible ? "burger-icon open" : "burger-icon";
+
+  // User Search input handling
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearch = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      navigate(`/search?search=${searchQuery}`);
+    }
+  };
 
   return (
     <nav className="nav">
@@ -42,9 +57,15 @@ function Navbar() {
             <Link to="/profile">Profile</Link>
           </li>
           <div className="search-input-container">
-            <input type="text" placeholder="Search..." className="search-input" />
+              <input
+                type="text"
+                placeholder="Search..."
+                className="search-input"
+                value={searchQuery}
+                onChange={handleSearchInputChange}
+                onKeyDown={handleSearch}
+              />
           </div>
-          <div></div>
           <li>
             <Link to="/signup">Signup</Link>
           </li>

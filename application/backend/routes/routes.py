@@ -78,11 +78,11 @@ def feed():
     return render_template('feed.html')
 
 
-@bp.route('/search_result')
-def search_result():
+@bp.route('/api/search')
+def search():
     query = request.args.get('search')
     restaurants = controllers.search_restaurants(query)
-    return render_template('search_result.html', restaurants=restaurants)
+    return jsonify({"restaurants": restaurants})
 
 
 @bp.route('/team')
