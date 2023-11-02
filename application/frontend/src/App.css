@@ -103,7 +103,7 @@ body {
   text-align: center;
 }
 
-.profile-pic-placeholder2 {
+/* .profile-pic-placeholder2 {
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -114,13 +114,17 @@ body {
   font-size: 24px;
   color: #666;
   margin: auto;
-}
+} */
 
 .profile-pic {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Center the profile pic horizontally */
+ 
 }
 
 .edit-button {
@@ -146,10 +150,20 @@ body {
   text-align: center;
 }
 
+.followers a {
+  text-decoration: none; /* Remove underline from links */
+  color: rgb(65, 65, 65); /* Set the link color */
+}
+
 .following {
   font-size: small;
   color: rgb(65, 65, 65);
   text-align: center;
+}
+
+.following a {
+  text-decoration: none; /* Remove underline from links */
+  color: rgb(65, 65, 65); /* Set the link color */
 }
 
 .rank {
@@ -201,18 +215,71 @@ body {
 }
 
 .activity-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ddd;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
+  position: relative; /* Add position relative to the card container */
 }
 
-.been,
-.want,
-.recs {
-  text-decoration: none;
-  color: black;
+.activity-header {
+  display: flex;
+  align-items: center;
 }
+
+.user-profile-pic {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.activity-info {
+  flex-grow: 1; /* Allow the info to expand and take available space */
+}
+
+.activity-place {
+  text-align: center; /* Center the text within its container */
+  margin-bottom: 0.5rem;
+  
+}
+
+.activity-location {
+  color: #666;
+  margin: 0 auto; /* Center the text horizontally */
+  text-align: center; /* Center the text within its container */
+}
+
+.activity-comment {
+  margin-top: 1rem;
+  color: #333;
+}
+
+.activity-score {
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  background-color: #ffffff;
+  color: #238965;
+  font-size: 30px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-underline {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit the text color from its parent (black by default) */
+}
+
+
+
 
 /* edit profile*/
 
@@ -248,10 +315,10 @@ body {
   background-color: #fff;
 }
 
-.profile-pic {
+.profile-pic-main{
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   margin-bottom: 20px;
 }
 
