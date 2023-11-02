@@ -13,6 +13,7 @@ import Restaurant from "./resources/pages/Restaurant";
 import Following from "./resources/pages/Following";
 import { Route, Routes } from "react-router-dom";
 import Followers from "./resources/pages/Followers";
+import Followers2 from "./resources/pages/followers2";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/restaurant" element={<Restaurant />}></Route>
           <Route path="/following" element={<Following />}></Route>
           <Route path="/followers" element={<Followers />}></Route>
+          <Route path="/followers2" element={<Followers2 />}></Route>
         </Routes>
       </div>
     </>

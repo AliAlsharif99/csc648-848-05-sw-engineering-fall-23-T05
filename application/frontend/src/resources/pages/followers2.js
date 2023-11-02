@@ -1,20 +1,38 @@
 
 import Navbar from '../Navbar'
 import { FaNewspaper, FaUser, FaCheckCircle, FaBookmark, FaHeart } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
-import user1 from "../images/user1.jpg";
+import user2 from "../images/user2.jpg";
+import {FaArrowLeft } from 'react-icons/fa';
 
 
-function Profile() {
+function Followers2() {
 
   const [profilePic, setProfilePic] = useState('');
 
+  const [isFollowing, setIsFollowing] = useState(false);
+
+  // Toggle function to change follow state
+  const toggleFollow = () => {
+    setIsFollowing(!isFollowing);
+  };
+
+  let navigate = useNavigate();
+
+  // Function to handle back navigation
+  const goBack = () => {
+    navigate(-1); // This will take you back to the previous page
+   
+  };
+
   return (
     <div className="Profile-container">
+
+<button onClick={goBack} className="back-btn"><FaArrowLeft/></button>
       
     <div className='header'>
-      <h1>Satoru Gojo</h1>
+      <h1>Suguru Geto</h1>
       
       {/* {profilePic ? (
       <img src={profilePic} alt="User" className="profile-pic"/>
@@ -24,12 +42,12 @@ function Profile() {
         </div>
       )} */}
 
-      <img src={user1} className='profile-pic-main' alt="User"></img>
+      <img src={user2} className='profile-pic-main' alt="User"></img>
 
-      <p>@GoGojo</p>
-      <Link to="/edit-profile">
-        <button className='edit-button'>Edit Profile</button>
-      </Link>
+      <p>@GEToo</p>
+
+        <button className='follow-btn' onClick={toggleFollow}>{isFollowing ? 'Following' : 'Follow'}</button>
+      
     </div>
 
     <div className="follow-info">
@@ -50,7 +68,7 @@ function Profile() {
         
         <Link to="/leaderboard" className='remove-underline'>
         <div className='rank'>
-          <strong>#6</strong>
+          <strong>#5</strong>
           <p>Biterate Rank</p>
         </div>
         </Link>
@@ -106,7 +124,7 @@ function RecentActivityCard({ activity, userImage, place, location, comment, sco
   return (
     <div className="activity-card">
       <div className="activity-header">
-        <img src={user1} alt="User" className="user-profile-pic" />
+        <img src={user2} alt="User" className="user-profile-pic" />
         <div className="activity-info">
           <p className="activity-place">{place}</p>
           <p className="activity-location">{location}</p>
@@ -120,4 +138,4 @@ function RecentActivityCard({ activity, userImage, place, location, comment, sco
   );
 }
 
-export default Profile
+export default Followers2

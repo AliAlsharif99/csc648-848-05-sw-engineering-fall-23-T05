@@ -133,6 +133,17 @@ body {
   height: 25px;
 }
 
+.follow-btn {
+  border-radius: 20px;
+  background-color: white;
+  width: 100px;
+  height: 25px;
+}
+
+.follow-btn:hover {
+  background-color: #238965;
+}
+
 .edit-button:hover {
   background-color: #238965;
 }
@@ -1081,3 +1092,35 @@ ul {
 }
 
 /************* End of Styling for Search *************/
+
+
+/**Back buttun**/
+.back-btn {
+  border: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  text-align: center;
+  line-height: 45px; /* Adjust this to vertically center the arrow if needed */
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Adjust or remove margin as needed */
+}
+
+.back-btn:hover {
+  background-color: #238965; /* Slightly darker on hover */
+}
+
+
+/***follower-picture**/
+.follower-picture {
+  width: 50px; /* Example size */
+  height: 50px; /* Example size */
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures the image covers the area */
+  margin-right: 10px; /* Adds some space between the image and the name */
+}

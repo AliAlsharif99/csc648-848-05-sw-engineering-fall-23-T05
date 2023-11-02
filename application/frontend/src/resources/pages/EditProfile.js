@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import {FaArrowLeft } from 'react-icons/fa';
 
 function EditProfile() {
+
+  let navigate = useNavigate();
+
+  // Function to handle back navigation
+  const goBack = () => {
+    navigate(-1); // This will take you back to the previous page
+   
+  };
+
   const [profileData, setProfileData] = useState({
     profilePicture: '',
     username: 'username',
@@ -33,11 +43,12 @@ function EditProfile() {
   return (
    
 <div className='edit-profile-container'>
+
+  <button onClick={goBack} className="back-btn"><FaArrowLeft/></button>
+  
     <div className='edit-title'>
         <h1>Edit Profile</h1>
-        <Link to="/profile">
-            <button className='backbtn'></button>
-        </Link>
+         
     </div>
 
     <div>
