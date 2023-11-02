@@ -13,11 +13,13 @@ const followersData = [
 
 const FollowerItem = ({ name, isFollowing }) => {
   return (
+    <Link to="/followers2" className='remove-underline'>
     <li className="follower-item">
         <div className="following-picture"></div> 
       <span>{name}</span>
       <button>{isFollowing} {isFollowing ? 'Following' : 'Follow'}</button>
     </li>
+    </Link>
   );
 };
 
