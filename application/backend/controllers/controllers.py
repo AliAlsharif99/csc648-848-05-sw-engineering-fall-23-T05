@@ -61,7 +61,7 @@ def get_top_rated_restaurants(limit=15):
         return []
 
 
-def search_restaurants(query):
+def search_restaurants(query, limit=None):
     try:
         # Using the 'ilike' function for a case-insensitive search
         restaurants = restaurant.Restaurant.query.filter(

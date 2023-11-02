@@ -17,7 +17,6 @@ def home():
     user_data = None
     if 'user_id' in session:
         user_data = controllers.get_user_by_id(session['user_id'])
-    print(user_data)
     return jsonify({"restaurants": restaurants, "user": user_data})
 
 
@@ -68,6 +67,27 @@ def logout():
     return redirect(url_for('routes.home'))
 
 
+@bp.route('/api/search')
+def search():
+    query = request.args.get('search')
+    restaurants = controllers.search_restaurants(query)
+    return jsonify({"restaurants": restaurants})
+
+
+@bp.route('/api/search_suggestions')
+def search_suggestions():
+    query = request.args.get('search')
+    if not query:
+        return jsonify({"error": "Invalid query parameter"}), 400
+
+    try:
+        restaurants = controllers.search_restaurants(query, limit=6)
+        return jsonify({"restaurants": restaurants})
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return jsonify({"error": "Internal Server Error"}), 500
+
+
 @bp.route('/restaurant')
 def restaurant():
     return render_template('restaurant.html')
@@ -76,13 +96,6 @@ def restaurant():
 @bp.route('/feed')
 def feed():
     return render_template('feed.html')
-
-
-@bp.route('/api/search')
-def search():
-    query = request.args.get('search')
-    restaurants = controllers.search_restaurants(query)
-    return jsonify({"restaurants": restaurants})
 
 
 @bp.route('/team')
