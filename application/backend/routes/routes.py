@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for, session, jsonify
+from flask import Blueprint, render_template, request, make_response, redirect, url_for, session, jsonify
 from ..controllers import controllers
 
 bp = Blueprint('routes', __name__)
@@ -11,32 +11,24 @@ def home():
     user_data = None
     if 'user_id' in session:
         user_data = controllers.get_user_by_id(session['user_id'])
-    print(restaurants)
     return jsonify({"restaurants": restaurants, "user": user_data})
 
 
-@bp.route('/registration', methods=['GET', 'POST'])
+@bp.route('/api/registration', methods=['POST'])
 def registration():
-    if request.method == 'POST':
-        first_name = request.form.get('first_name')
-        last_name = request.form.get('last_name')
-        email = request.form.get('email')
-        password = request.form.get('password')
+    data = request.get_json()
+    first_name = data.get('first_name')
+    last_name = data.get('last_name')
+    email = data.get('email')
+    password = data.get('password')
 
-        # Check if user already exist...
-        existing_user = controllers.get_user_by_email(email)
-        if existing_user:
-            #flash('Email already registered. Please use a different email.', 'danger')
-            print('Email already registered. Please use a different email.')
-            return redirect(url_for('routes.registration'))
+    # Check if user already exists...
+    existing_user = controllers.get_user_by_email(email)
+    if existing_user:
+        return make_response(jsonify({'message': 'Email already registered. Please use a different email.'}), 400)
 
-        controllers.add_user(first_name, last_name, password, email)
-
-        # flash('Registration successful!', 'success')
-        print('Registration successful!')
-        return redirect(url_for('routes.login'))
-
-    return render_template('registration.html')
+    controllers.add_user(first_name, last_name, password, email)
+    return make_response(jsonify({'message': 'Registration successful!'}), 201)
 
 
 @bp.route('/login', methods=['GET', 'POST'])
