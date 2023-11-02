@@ -1,8 +1,10 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+from flask_caching import Cache
 
 db = SQLAlchemy()
+cache = Cache(config={'CACHE_TYPE': 'simple', 'CACHE_DEFAULT_TIMEOUT': 300})  # Configure cache
 
 
 def create_app():
@@ -16,6 +18,7 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Disable tracking to save resources
 
     db.init_app(app)
+    cache.init_app(app)  # Initialize cache
 
     # Import and register blueprints
     from .routes import routes

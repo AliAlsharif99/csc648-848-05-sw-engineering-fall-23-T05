@@ -2,6 +2,7 @@ from ..models import user, restaurant, restaurant_image, image_url
 from .. import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy import or_
+from .. import cache
 
 
 def add_user(first_name, last_name, password, email):
@@ -26,6 +27,7 @@ def get_user_by_email(email):
     return user.User.query.filter_by(email=email).first()
 
 
+@cache.cached(timeout=50, key_prefix='top_rated_restaurants')
 def get_top_rated_restaurants(limit=15):
     try:
         # Fetch restaurants in descending order by rating.
