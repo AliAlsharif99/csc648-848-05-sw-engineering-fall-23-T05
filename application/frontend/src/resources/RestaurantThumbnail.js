@@ -8,9 +8,11 @@ function RestaurantThumbnail({ restaurant }) {
     navigate('/restaurant', { state: { restaurant } });
   };
 
+  const imagePath = restaurant.image_url ? restaurant.image_url.replace('images/', '') : '';
+
   return (
     <div className="restaurant-thumbnail" onClick={handleClick}>
-      <img src={restaurant.imageUrl} alt={restaurant.name} />
+      <img src={process.env.PUBLIC_URL + '/images/' + imagePath} alt={restaurant.name} />
       <h3>{restaurant.name}</h3>
       <p>Rating: {restaurant.rating}</p>
     </div>

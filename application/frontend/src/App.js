@@ -14,6 +14,7 @@ import Following from "./resources/pages/Following";
 import { Route, Routes } from "react-router-dom";
 import Followers from "./resources/pages/Followers";
 import Followers2 from "./resources/pages/followers2";
+import Landing from "./resources/pages/Landing";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       {/* <Restaurant /> */}
       <div className="container">
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route path="/home" element={<Home />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/meettheteam" element={<MeetTheTeam />} />
