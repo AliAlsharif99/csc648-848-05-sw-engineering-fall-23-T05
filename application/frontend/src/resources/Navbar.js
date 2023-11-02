@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import './styles/SearchSuggestion.css';
 
 function Navbar() {
   const [burgerVisible, setBurgerVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchSuggestions, setSearchSuggestions] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
 
   const toggleBurger = () => {
     setBurgerVisible(!burgerVisible);
@@ -10,9 +15,29 @@ function Navbar() {
 
   const burgerClass = burgerVisible ? "burger-icon open" : "burger-icon";
 
-  // User Search input handling
-  const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
+  useEffect(() => {
+    const fetchSearchSuggestions = async () => {
+      try {
+        const url = `http://localhost:5005/api/search_suggestions?search=${searchQuery}&limit=6`;
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setSearchSuggestions(data.restaurants);
+      } catch (error) {
+        console.error("Error fetching search suggestions", error);
+      }
+   };
+    if (searchQuery) {
+      fetchSearchSuggestions();
+      setShowDropdown(true);
+    } else {
+      setShowDropdown(false);
+    }
+  }, [searchQuery]);
+
+
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -56,7 +81,7 @@ function Navbar() {
           <li>
             <Link to="/profile">Profile</Link>
           </li>
-          <div className="search-input-container">
+          <div className="search-container">
               <input
                 type="text"
                 placeholder="Search..."
@@ -65,6 +90,9 @@ function Navbar() {
                 onChange={handleSearchInputChange}
                 onKeyDown={handleSearch}
               />
+              {showDropdown && searchSuggestions.length > 0 && (
+                <SearchDropdown suggestions={searchSuggestions} />
+              )}
           </div>
           <li>
             <Link to="/signup">Signup</Link>
@@ -75,6 +103,22 @@ function Navbar() {
         </ul>
       </div>
     </nav>
+  );
+}
+
+function SearchDropdown({ suggestions }) {
+  return (
+    <div className="search-dropdown">
+      <ul>
+        {suggestions.map((suggestion) => (
+          <li key={suggestion.id}>
+            <Link to={`/restaurant`}>
+              {suggestion.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

@@ -19,7 +19,6 @@ function Home() {
           const data = await response.json();
           setRestaurants(data.restaurants);
           setUser(data.user);
-          console.log(data.user)
         } else {
           console.error('Server Error: ', response.statusText);
         }
