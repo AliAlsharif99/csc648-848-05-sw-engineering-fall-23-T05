@@ -15,6 +15,7 @@ function RestaurantThumbnail({ restaurant }) {
       <img src={process.env.PUBLIC_URL + '/images/' + imagePath} alt={restaurant.name} />
       <h3>{restaurant.name}</h3>
       <p>Rating: {restaurant.rating}</p>
+      <p>Address: {restaurant.address}</p>
     </div>
   );
 }

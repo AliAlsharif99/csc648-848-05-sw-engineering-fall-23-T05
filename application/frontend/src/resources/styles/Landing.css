@@ -2,9 +2,27 @@
   text-align: center;
 }
 
+.carousel-container {
+  height: 500px; /* or whatever height you prefer */
+}
+
 .banner {
   padding: 50px;
   background-color: #f0f0f0;
+}
+
+.banner button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 .restaurant-list {
@@ -17,20 +35,23 @@
   width: 30%;
   padding: 10px;
   cursor: pointer;
+  border: 1px solid #ddd; /* Light grey border */
+  margin-bottom: 16px;
+  border-radius: 8px; /* Optional: for rounded borders */
+  overflow: hidden; /* Optional: to ensure the border contains the image */
 }
 
 .restaurant-thumbnail img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+  width: 100%; /* Ensure the image covers the full width of the container */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Cover the container without stretching the image */
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 8px; /* Round the top corners */
+  border-top-right-radius: 8px;
 }
 
-.restaurant-thumbnail h3 {
-  font-size: 1.2em;
-  margin-top: 10px;
-}
-
+.restaurant-thumbnail h3,
 .restaurant-thumbnail p {
-  font-size: 1em;
-  color: #555;
+  margin: 10px 0;
 }
+
