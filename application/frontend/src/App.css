@@ -47,7 +47,7 @@ body {
   font-weight: 900;
   color: #238965;
   text-shadow: 3px 2px 4px rgba(169, 169, 169, 0.63);
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .nav li:hover {
@@ -124,7 +124,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto; /* Center the profile pic horizontally */
- 
 }
 
 .edit-button {
@@ -243,7 +242,6 @@ body {
 .activity-place {
   text-align: center; /* Center the text within its container */
   margin-bottom: 0.5rem;
-  
 }
 
 .activity-location {
@@ -258,9 +256,9 @@ body {
 }
 
 .activity-score {
-  position: absolute; 
-  top: 10px; 
-  right: 10px; 
+  position: absolute;
+  top: 10px;
+  right: 10px;
   background-color: #ffffff;
   color: #238965;
   font-size: 30px;
@@ -277,9 +275,6 @@ body {
   text-decoration: none; /* Remove underline from links */
   color: inherit; /* Inherit the text color from its parent (black by default) */
 }
-
-
-
 
 /* edit profile*/
 
@@ -315,7 +310,7 @@ body {
   background-color: #fff;
 }
 
-.profile-pic-main{
+.profile-pic-main {
   border-radius: 50%;
   width: 250px;
   height: 250px;
@@ -617,16 +612,15 @@ header h1 {
 .left {
   width: 600px;
   position: relative;
+  margin-top: 50px;
 }
 
 .top {
   display: flex;
-  gap: 10px;
-  flex-direction: row;
-  align-items: center;
+  margin-bottom: 100px;
   justify-content: center;
+
   text-align: center;
-  margin-bottom: 50px;
 }
 
 img {
@@ -656,7 +650,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
 }
 
 .popular-txt {
@@ -716,8 +709,27 @@ img {
   text-decoration: none;
   resize: none;
   border-radius: 4px;
-  margin: 0px 20px;
+  margin: 0px 40px;
   margin-bottom: 20px;
+}
+
+.review-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.review-btn {
+  background-color: white;
+  border: none;
+  padding: 10px 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #059178;
+  cursor: pointer;
 }
 
 .x {
@@ -746,7 +758,6 @@ img {
   pointer-events: none;
 }
 
-
 /************* Styling for Leaderboard *************/
 .leaderboard-container {
   max-width: 100%;
@@ -759,7 +770,7 @@ img {
 }
 
 thead {
-  background-color: #ECE7E7;
+  background-color: #ece7e7;
 }
 
 .leaderboard-table {
@@ -770,12 +781,12 @@ thead {
   overflow: hidden;
 }
 
-.leaderboard-table>thead>th {
+.leaderboard-table > thead > th {
   padding: 20px;
 }
 
 td {
-  border-bottom: 1px solid #F0E6E6;
+  border-bottom: 1px solid #f0e6e6;
   padding: 10px;
 }
 
@@ -829,8 +840,6 @@ td {
 
 /************* End of Styling for Leaderboard *************/
 
-
-
 /************* following *************/
 /* Style for the search container */
 .search-following-container {
@@ -852,7 +861,7 @@ td {
 }
 
 .search-follwoing-container input:focus {
-  border-color: #007BFF;
+  border-color: #007bff;
 }
 
 /* Style for the followers list */
@@ -907,7 +916,6 @@ ul {
   align-items: center;
   height: 50vh;
   /* viewport height */
-
 }
 
 /* Centered content wrapper */
@@ -1002,8 +1010,6 @@ ul {
 
 /************* End of Styling for MeettheTeam *************/
 
-
-
 /************* Styling for Search *************/
 .search-container {
   max-width: 100%;
@@ -1039,7 +1045,7 @@ ul {
 
 .restaurant-result-content {
   line-height: 12px;
-  color: #6E7072;
+  color: #6e7072;
 }
 
 .result {

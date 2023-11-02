@@ -12,9 +12,11 @@ function toggleThankYou() {
   const head = document.querySelector(".review-header");
   const text = document.querySelector(".review-textarea");
   const btn = document.querySelector(".review-btn");
+  const reviewForm = document.querySelector(".review-form");
   head.classList.add("hide");
   text.classList.add("hide");
   btn.classList.add("hide");
+  reviewForm.classList.add("hide");
 }
 
 function Restaurant() {
@@ -44,7 +46,49 @@ function Restaurant() {
     <>
       <div className="review-ui">
         <p className="review-header">Leave your review for Fuki Ramen!</p>
-        <textarea className="review-textarea" rows="12" cols="60"></textarea>
+        <form className="review-form">
+          <div>
+            <input type="radio" value="1" id="1" class></input>
+            <label for="1">1</label>
+          </div>
+          <div>
+            <input type="radio" value="2" id="2"></input>
+            <label for="2">2</label>
+          </div>
+          <div>
+            <input type="radio" value="3" id="3"></input>
+            <label for="3">3</label>
+          </div>
+          <div>
+            <input type="radio" value="4" id="4"></input>
+            <label for="4">4</label>
+          </div>
+          <div>
+            <input type="radio" value="5" id="5"></input>
+            <label for="5">5</label>
+          </div>
+          <div>
+            <input type="radio" value="6" id="6"></input>
+            <label for="6">6</label>
+          </div>
+          <div>
+            <input type="radio" value="7" id="7"></input>
+            <label for="7">7</label>
+          </div>
+          <div>
+            <input type="radio" value="8" id="8"></input>
+            <label for="8">8</label>
+          </div>
+          <div>
+            <input type="radio" value="9" id="9"></input>
+            <label for="9">9</label>
+          </div>
+          <div>
+            <input type="radio" value="10" id="10"></input>
+            <label for="10">10</label>
+          </div>
+        </form>
+        <textarea className="review-textarea" rows="10" cols="40"></textarea>
         <button
           className="review-btn"
           onClick={toggleThankYou}
@@ -59,8 +103,8 @@ function Restaurant() {
     </>
   );
 
-  const score1 = <p className="score">7.7</p>;
-  const score2 = <p className="score">6.1</p>;
+  const score1 = <p className="score">7.8</p>;
+  const score2 = <p className="score">8.4</p>;
   const recScore = "Rec Score";
   const friendScore = "Friend Score";
 
