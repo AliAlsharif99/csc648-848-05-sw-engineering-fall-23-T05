@@ -10,7 +10,7 @@ cache = Cache(config={'CACHE_TYPE': 'simple', 'CACHE_DEFAULT_TIMEOUT': 300})  # 
 def create_app():
     app = Flask(__name__)
     # Cross-Origin Resource Sharing (CORS) : With this, will allow our React app to make requests to our Flask server
-    CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
+    CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
     app.secret_key = 'bite_rate_app session_config secret_key'
 
     # Database configuration
