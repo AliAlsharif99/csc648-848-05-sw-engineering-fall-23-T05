@@ -31,7 +31,7 @@
 
 |             Name of the Project               |                            URL of the Project                          | 
 |                    :---:                      |                                 :---:                                  |
-|   BiteRate                                    |                           http://3.128.32.143/                         |                                                        
+|   BiteRate                                    |       https://hor-proto.dsrx6l5krjw1l.amplifyapp.com/                  |                                                        
  
 
 ## NO code needs to be stored in the root of your repository. You may rename the application folder if you like to your team's application name. But all source code related to your team's application should be stored inside the application folder.
