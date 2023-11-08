@@ -10,7 +10,7 @@ function LandingPage() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('http://3.19.239.176:5005/api/);
+        const response = await fetch(`http://3.19.239.176:5005/api/`);
         if (response.ok) {
           const data = await response.json();
           setRestaurants(data.restaurants);

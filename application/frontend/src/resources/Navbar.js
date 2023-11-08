@@ -18,7 +18,7 @@ function Navbar() {
   useEffect(() => {
     const fetchSearchSuggestions = async () => {
       try {
-        const url = 'http://3.19.239.176:5005/api/search_suggestions?search=${searchQuery}&limit=6`;
+        const url = `http://3.19.239.176:5005/api/search_suggestions?search=${searchQuery}&limit=6`;
         const response = await fetch(url);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

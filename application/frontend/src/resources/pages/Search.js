@@ -11,7 +11,7 @@ function Search() {
     const query = new URLSearchParams(location.search).get('search');
     setSearchQuery(query);
 
-    fetch('http://3.19.239.176:5005/api/search?search=${query}`, {
+    fetch(`http://3.19.239.176:5005/api/search?search=${query}`, {
       method: 'GET',
       credentials: 'include',
     })
