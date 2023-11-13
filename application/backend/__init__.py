@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -10,9 +11,14 @@ cache = Cache(config={'CACHE_TYPE': 'simple', 'CACHE_DEFAULT_TIMEOUT': 300})  # 
 
 def create_app():
     app = Flask(__name__)
-    # Cross-Origin Resource Sharing (CORS) : With this, will allow our React app to make requests to our Flask server
-    CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
     app.secret_key = 'bite_rate_app session_config secret_key'
+
+    # Cross-Origin Resource Sharing (CORS) : With this, will allow our React app to make requests to our Flask server
+    if os.environ.get('FLASK_ENV') == 'production':
+        cors_origins = "http://biterate-env-1.eba-r3mebmuv.us-east-2.elasticbeanstalk.com"
+    else:
+        cors_origins = "http://localhost:3000"
+    CORS(app, resources={r"/api/*": {"origins": cors_origins}}, supports_credentials=True)
 
     # Database configuration
     app.config['SQLALCHEMY_DATABASE_URI'] \
