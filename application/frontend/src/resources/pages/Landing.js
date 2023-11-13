@@ -10,7 +10,7 @@ function LandingPage() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('http://127.0.0.1:5005/api/');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/`);
         if (response.ok) {
           const data = await response.json();
           setRestaurants(data.restaurants);

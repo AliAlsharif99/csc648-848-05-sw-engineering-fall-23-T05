@@ -11,7 +11,7 @@ function Search() {
     const query = new URLSearchParams(location.search).get('search');
     setSearchQuery(query);
 
-    fetch("http://127.0.0.1:5005/api/search?search=${query}", {
+    fetch(`${process.env.REACT_APP_API_URL}/api/search?search=${query}`, {
       method: 'GET',
       credentials: 'include',
     })
