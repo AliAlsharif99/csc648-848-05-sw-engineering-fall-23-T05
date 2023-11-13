@@ -11,7 +11,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://3.19.239.176:5005/api/login', {
+      const response = await fetch('http://127.0.0.1:5005/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ function Login() {
       if (response.ok) {
         const data = await response.json();
         alert('Logged in successfully!', data);
-        navigate('/home'); // Adjust the route as needed
+        navigate('/home');
       } else {
         alert('Failed to log in');
       }

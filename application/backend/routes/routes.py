@@ -12,6 +12,7 @@ def landing():
 
 @bp.route('/api/home')
 def home():
+    print(session)
     restaurants = controllers.get_top_rated_restaurants()
 
     user_data = None
@@ -39,6 +40,7 @@ def registration():
 
 @bp.route('/api/login', methods=['POST'])
 def login():
+    print(session)
     if 'user_id' in session:
         print('You are already logged in!')
         return jsonify({"message": "Already logged in"}), 200
@@ -51,6 +53,7 @@ def login():
 
     if user_instance:
         session['user_id'] = user_instance.user_id
+        print(session)
         print('Logged in successfully!')
         return jsonify({"message": "Logged in successfully!"}), 200
     else:
